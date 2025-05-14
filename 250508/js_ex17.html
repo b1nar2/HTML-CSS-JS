@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let score = 88;
+        let credit = 'F';
+
+        score = parseInt(score / 10);  
+        credit = 'F';
+
+        switch (score) {
+
+        case 10: 
+        case 9: credit = 'A'; break;   
+        case 8: credit = 'B'; break;
+        case 7: credit = 'C'; break;
+        case 6: credit = 'D'; break;
+        default: credit = 'F'; break;
+
+        }
+        
+        console.log("학점 : ", credit);         
+
+    </script>
+    
+</body>
+</html>

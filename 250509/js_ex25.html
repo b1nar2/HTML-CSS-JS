@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    // 1~10 까지의 합계 while
+    let i =1;
+    let sum = 0;
+    
+     // while (i<=10) {
+     while (true) { // = for (;;){   => 한계치 설정x, 무한반복문. break문 추가 필요.
+     // while (1) { // (O)   
+     // while (-1) { // (O)
+     // while(0) { // 0 => false: while문 미실행
+     // while(NaN) { // NaN => false: while문 미실행
+        if (i <=10) {
+        sum += i;
+        console.log("sum =", sum)
+        i++;
+    } else{
+            break;
+    }
+
+    }
+    
+    console.log(`1 ~ 10 까지의 합계는 ${sum} 입니다.`);
+
+
+    </script>
+    
+</body>
+</html>

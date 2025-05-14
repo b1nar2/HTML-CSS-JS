@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1~10까지의 수열(수열: sequence) 합계
+        // 1, 2, 3, ... , 10
+
+        // 카운트(계수)
+        // 변수 명명 과정
+        // 세는 것 => 변수 => 카운터(counter) 변수: 1, 2, 3, ... , 10 => 명명(naming) => counter(cnt), index(idx), "i", j, k
+        // 합계 보관하는 것 => 변수 => 합계 변수 명명(naming) total, "sum" 
+
+        let i = 1; // 초기값(치): initial value
+        let end = 10; // 마지막(끝)값
+        
+        let sum = 0; // 정의(X) => undefined, 합계 = 0
+        //let sum; => 초기화(초기값 설정(대입)) 안 하면(unless) => 결과 NaN(Not a Number)
+
+        //합계 계산 => 반복문(loop)
+
+        for (i = 1; i <= 10; i++) {
+        // =for (let i = 1; i <= end i++)
+
+            // 중간 결과 확인: 변수 타이틀(제목) 표기! (디버깅에 용의)
+            // console.log("i =", i);
+
+            // 합계 구하기(연산, 계산)
+            // 1) sum(기존 합계값) + i(카운터)
+            // 2) 합계 보관 => sum
+            sum = sum + i;
+
+            console.log("sum =", sum);
+        } //for
+
+        // 결과
+        // 1~10까지의 합계는 55 입니다.
+        // let result = `1~10까지의 합계는 55 입니다.`;
+        let result = `1~10까지의 합계는 ${sum} 입니다.`;
+        console.log(result);
+
+        // console.log(`1~10까지의 합계는 ${sum} 입니다.`); // 최적화
+        console.log(`1~10까지의 합계는 ${sum} 입니다.`);
+        
+    </script>
+    
+</body>
+</html>

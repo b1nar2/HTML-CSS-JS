@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        // 1 ~ 10까지의 수열(순열:sequence) 합계
+        let sum = 0;
+
+        // 3)
+        // let i = 1;
+
+        // for (let i = 1; i <= 10; i++) {
+        // for (let i = 1; i < 11; i += 1) {
+        // for (let i = 1; i < 11; ++i) {
+        // for (; i < 11; ++i) { // 3)
+        // for (i < 11; ++i) { // (X) 
+        // ";" 미표기 =>     
+        // Uncaught SyntaxError: Unexpected token ')'
+
+        for (let i = 1; ; i++) { // 4) 무한 루프(infinite loop)
+
+            if (i <= 10) {
+                console.log("sum(합계) =", sum += i);
+            } else {
+                break;
+            }
+
+            // 중간 결과 확인 : 변수 타이틀(제목) 표기 !
+            // console.log("i =", i);
+
+            // 최적화
+            // 1)
+            // sum += i;
+            // console.log("sum =", sum);
+
+            // 2) 
+            // console.log("sum(합계) =", sum += i);
+
+        } // for 끝
+
+        console.log(`1 ~ 10 까지의 합계는 ${sum} 입니다.`);
+    </script>
+</body>
+</html>

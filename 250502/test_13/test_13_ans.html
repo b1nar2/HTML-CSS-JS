@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공동(공통) 메뉴(common/global navigation bar)</title>
+
+    <!-- google material icons : https://material.io/tools/icons/?style=baseline -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    <!-- google icons : https://fonts.google.com/icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+
+        nav {
+            display: flex;
+            /* justify-content: end; */
+            /* justify-content: right; */
+            justify-content: flex-end;
+            padding-right: 30px;
+        }
+
+        ul {            
+            display: flex;
+            justify-content: space-between;
+            width: 900px;
+            list-style: none;
+            /* list-style-type: none; */
+            /* background-color: yellow; */                 
+        }
+
+        ul li {
+            font-size: 1em;
+            font-weight: 500;
+            padding: 20px 0;            
+        }
+
+        li.txt-cmm-menu {
+            width : 100px;
+        }
+
+        li.icon-cmm-menu {
+            width : 20px;
+            font-size: 1.2em;            
+        }
+
+        li a {            
+            color: #333;
+            text-decoration: none;            
+        }
+
+        li.txt-cmm-menu a:hover {
+            font-weight:900;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        
+        <ul>
+            <li class="txt-cmm-menu"><a href="#">스스로 해결</a></li>
+            <li class="txt-cmm-menu"><a href="#">전문상담</a></li>
+            <li class="txt-cmm-menu"><a href="#">서비스 안내</a></li>
+            <li class="txt-cmm-menu"><a href="#">서비스 예약</a></li>
+            <li class="txt-cmm-menu"><a href="#">소모품샵</a></li>
+            <li class="txt-cmm-menu"><a href="#">고객의 소리</a></li>
+
+            <li class="icon-cmm-menu">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </a>
+            </li>
+            <li class="icon-cmm-menu">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                </a>
+            </li>
+            <li class="icon-cmm-menu">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+    
+</body>
+</html>

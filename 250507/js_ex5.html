@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function() {
+            
+            
+            // 1) let num1 = 1;
+            // 2) let num2 = 2;
+            // let num =1, num2=2; => 1), 2) 줄임 표현
+    
+            // const num1; // (X)
+            // const num1 = 1; //(O) 상수(constant varialbe) 정의
+            //값이 변하지 않는(고정적인)변수 => 상수
+    
+            // num1 = 2; // (X) 대입(Assignment) 불가
+            // 기존값을 보호(캡슐화, 은닉)!
+            // js_ex5.html:22 Uncaught TypeError: Assignment to constant variable. at window.onload (js_ex5.html:22:14)
+    
+            // let str = "I'm a sutdent"; // (O)
+            // let str = 'I'm a sutdent'; // (X)
+            // let str = 'I\'m a sutdent'; // (O) "\" 활용
+            // let str = "어린이날은 \"5월 5일\" 입니다."; //(O)
+    
+            // 기본 자료형(낱개)
+            // => 같은 자료형 다수 : 배열
+            // 다른 자료형 다수 : 구조체(구조적 언어) ex)언어, 소속(멤버) 변수
+            // => oop + 구조체 => 클래스 : 소속(멤버)변수_메서드(소속 함수)
+    
+            let str = "<span class=\"abcd\">문자<span>";
+    
+            let str2 ="<div id ='wrap'><div id='box'>" + str +"</div></div>" // 템플릿 리터럴 이전 방식
+            let str3 =`<div id ='wrap'><div id='box'>${str}</div></div>` // template literal 방식
+    
+            console.log("str3 :" ,str3)
+        }
+    
+        </script>
+
+</head>
+<body>
+    
+</body>
+</html>

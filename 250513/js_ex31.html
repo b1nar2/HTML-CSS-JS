@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onlaod= function() {
+        // 레이어(layer : div) 구성
+        // DOM 함수
+        // HTML DOM 객체 : HTML + "Div" + Element => HTMLDivElement => Web APIs
+
+        // div 태그 작성
+        let div1 = document.createElement("div")
+
+        // div 내용(글)
+        let txt = document.createTextNode("데이터");
+
+        // div <= 값(내용)
+        // <div>데이터</div>
+        // div : 부모 node, 데이터: 자식 node
+        div1.appendChild(txt);
+
+        // body에 div 삽입 => 화면 출력
+        document.body.appendChild(div1)
+
+        // document.body.innerHTML =`<div>
+        //                              데이터2
+        //                           </div>`;
+
+        // 속성 추가
+        // div => HTMLDivElement 멤버 필드(속성)
+        // id 존재 유뮤 확인: 조부모 객체(Element)가 보유! => 상속받아 사용 가능
+        // div1.id = "layer1"; // 조부모 객체(Element) id 속성(필드)(O)
+        div1.setAttribute("id", "layer1");
+        
+        // div1.class = "layer1-class"; // (X)
+        // HTMLDivElement (자신 or 상속된) 속성 (X)
+               
+        div1.className = "layer1-class"; // HTMLDivElement (자신 or 상속된) 속성 (O)
+
+
+        // custom(사용자 정의) 속성 작성
+        // div1.setAttribute("class", "layer1-class");
+
+        // CSS 속성 할당
+        /*
+        div1.style.position = " absolute";
+        div1.style.left = "100px";
+        div1.style.top = "100px";
+        div1.style.width = "300px";
+        div1.style.height = "300px";
+        div1.style.backgroundColor = "cyan";
+        */
+
+        let cssStr =`position: Fixed;
+                    left: 100px;
+                    top: 100px;
+                    width: 300px;
+                    height: 300px;
+                    background-color : cyan
+                    `;
+
+        div1.setAttribute("style", cssStr);
+
+        div1.style.display = "flex";
+        div1.style.alignItems = "center";
+        div1.style.justifyContent = "center";
+        
+        div1.addEventListener("click", (e)=> {
+            // console.log("e target :","e.target )
+            console.log("e.currentTarget :", e.currentTarget);
+            console.log("e.currentTarget.id :". e.currentTarget.id);
+
+            let id = e.currentTarget.id
+            let layer1 = document.getElementById(id);
+            layer.style.backgroundColer = "red";
+        })
+
+
+    }
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- google icons :  https://fonts.google.com/icons -->
+    <!-- 구글 아이콘 CDN(Content Delivery Network) 링크 --> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <!-- CSS 외장 파일 링크 CSS 폴더에 있는 popup_style.css를 불어들임 -->    
+    <link rel="stylesheet" href="js_ex28.css" />
+    
+    <style>
+    /*
+    #popup {
+        visibility: hidden;
+    }
+    */
+    </style>
+ 
+
+    <script>
+    // window 객체(브라우저 객체) 원형 ?
+    // 교재 18-3 단원에 출전
+    // MDN => Web APIs : https://developer.mozilla.org/ko/docs/Web/API/Window      
+    // window 객체 소속(멤버) load 이벤트 속성
+    // onload : https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+    // window.onload = () => {
+        window.onload = function() {
+    // window.addEventListener("load", function() {
+    // })  
+        
+
+        // 팝업창 제어
+        // 1. 초기 상태: 팝업창 은닉
+        // id="popup"/ class="modal"
+        // 팝업창 요소 인식(등록)
+        // getElementById=> https://developer.mozilla.org/ko/docs/Web/API/Document/getElementById
+        /*
+        document.getElementById("popup").onclick = function() {
+            console.log("버튼");
+        }
+        */
+
+        // div 은닉 => visivility css속성
+        // https://developer.mozilla.org/ko/docs/Web/CSS/visibility
+
+
+        // HTMLElement: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+        
+        // CSS => style: HTMLElement 소속의 style 속성(멤버 변수)
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+        
+        // 기존의 CSS 정보
+        // let vis = document.getElementById("popup").style;
+        // console.log("팝업창 은닉 여부 : ", vis)
+
+        document.getElementById("popup").style.visivility = 'hidden';
+        // 아래와 동일한 효과(CSS 적용)
+        // CSS
+        // #popup {visibility: hidden;}
+
+            
+        // 2. 팝업창 오픈 버튼 작성 & 이벤트 처리: 클릭 => 팝업창 오픈
+
+        // 버튼 추가 : 동적 추가 => F12(devtools)에서 변환된 소스 확인
+        // <button id = "btn" type="button">버튼</button>
+        document.body.innerHTML += '<button id = "btn" type="button">버튼</button>';
+
+        /*
+        document.getElementById("btn").onclick = function() {
+        // document.getElementById("btn").onclick = () => {    
+            console.log("버튼 클릭");
+        }
+        */
+
+        // 전역 변수화
+        let btn = document.getElementById("btn");
+        let popup = document.getElementById("popup");
+
+        btn.addEventListener("click", function() {
+        // .addEventListener("click"), () => {
+            console.log("버튼 클릭");
+            //팝업창 보여주기(띄우기)
+        popup.style.visibility = 'visible';
+
+
+        });
+
+
+        // 3. 팝업창 닫기: 기존 기입한 "X"(우측 상단) 버튼 => 팝업창 닫기
+        // id = "modal_close_btn"
+
+        let closeBtn = document.getElementById("modal_close_btn");
+
+        closeBtn.onclick = function() {
+            console.log("창닫기");
+            // 팝업창 은닉(가리기)
+            popup.style.visibility = 'hidden';
+        }
+
+
+    }
+    </script>
+
+</head>
+<body>
+
+    <!-- <button id = "btn" type="button">버튼</button> -->
+
+    <!-- modal -->
+    <div id="popup" class="modal">
+        
+        <!-- modal header -->
+        <div class="modal_header">
+        
+            <!-- bullet icon -->
+            <div class="modal_header_icon">
+
+                <!-- 
+                    web_asset 이라는 검색어를 이용하여 팝업을 상징하는 아이콘을 
+                    검색하여 코드를 완성하십시오.
+                -->
+                <!-- TODO -->    
+                <span class="material-symbols-outlined">
+                    web_asset
+                </span>	        
+            </div>
+            <!--// bullet icon -->
+            
+            <!-- title -->
+            <!-- 제목(타이틀) 부분을 완성하십시오. class : modal_header_title -->
+            <!-- TODO --> 
+            <div class="modal_header_title">
+                제목
+            </div>
+            <!--// title -->
+            
+            <!-- closing button icon -->
+            <div class="modal_header_close">
+
+                <!-- 
+                    창닫기(close) 아이콘 부분을 완성하십시오. 
+                    링크 버튼 id : modal_close_btn                    
+                 -->
+                <a href="#" id="modal_close_btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </a>
+            </div>
+            <!--// closing button icon -->
+
+        </div>
+        <!--// modal header -->
+        
+        <!-- modal body -->
+        <div class="modal_body">
+            글 내용입니다.
+        </div>
+        <!--// modal body -->
+        
+        <!-- modal footer -->
+        <!--
+        <div class="modal_footer">
+        </div>
+        -->
+        <!--// modal footer -->
+        
+    </div>
+    <!--// modal -->
+            
+</body>
+</html>

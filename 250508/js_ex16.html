@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const expr = "plum";
+    
+        switch (expr) {
+        
+        default: 
+            console.log(`Sorry, we are out of ${expr}.`);
+            break;     
+        case "Oranges":
+            console.log("Oranges are $0.59 a pound.");
+            break;        
+        case "Mangoes":
+        case "Papayas":
+            console.log("Mangoes and papayas are $2.79 a pound.");
+            // Expected output: "Mangoes and papayas are $2.79 a pound."
+            break;
+        }
+        </script>
+    
+</body>
+</html>

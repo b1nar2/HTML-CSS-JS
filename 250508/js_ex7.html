@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <script>
+        window.onload=function() {
+    
+            /*
+            let num = prompt("입력 :"); //"8"
+            console.log("num 자료형:", typeof num);
+    
+            let result = num*10; // num => 숫자(number) : 자동 변환 ("8"-문자열 => 8-숫자)
+            console.log("result :", result);
+            */
+    
+            /*
+            let result = "10" + 20; // => "1020" 연결 연산
+            console.log("result :", result);
+            */
+    
+    
+            /*
+            let result = 1 + 2 + "3" + 4 + 5; // => "3345"
+            // 1 + 2 =3 (덧셈)
+            // 3 + "3" = "33" (문자열 연결연산)
+            // "33" + 4 = "334" (문자열 연결연산)
+            // "334" + 5 = "3345" (문자열 연결연산) 
+            console.log("result :", result);
+            */
+    
+            
+            let str = "123"; // 형변환 대상(O) => 내용이 숫자 성분인 문자열
+            // let str = "123.8"; => 125 : 소수부 절사, 정수부만 가져옴
+            // let str = "123ABC"; //주의) 형변환 대상(O), 123 정수만 가져옴
+            // let str = "ABC123"; // 주의) 형변환 대상(X), NaN
+            // let str = "14K23"; // => 2: 문자열 뒤로는 삭제됨
+            // let str = "abcd"; // 형변환 대상(X)
+            // let num = parseInt(str); // 형변환(casting)
+            
+            let num = Number.parseInt(str); // 형변환(casting)
+            // "abcd" => 형변환 결과값: NaN(Not a Number) = Number.NaN
+            // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN
+            let result = num + 1;
+    
+            console.log("result :", result);
+    
+    
+        }
+        </script>
+
+</head>
+<body>
+    
+</body>
+</html>

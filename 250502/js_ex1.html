@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        #heading {
+            color:red;
+        }*/
+
+        /* CSS로 이벤트 처리
+        #heading:hover {
+            color: red;
+        }*/
+    </style>
+
+    <script>
+        // 제어하고자 하는 요소(태그) 보다 제어 코드가 후위(뒤)에 위치하면 코드를 그대로 표기
+        // 제어하고자 하는 요소(태그) 보다 제어 코드가 전위(앞)에 위치하면 별도의 전체 이벤트 처리 구문내에서 표기해야됨.
+
+        // 같은 이벤트 처리 구문 => 우선순위: script 태그 내의 구문 > inline 내의 구문
+        // CSS 구문의 우선순위와는 다름!
+
+        window.onload=function() { // 전체 이벤트 처리 구문
+        // html 문서가 웹브라우저(window) 에서 읽어 들여졌을 떄(onload) function() { 이후의 구문이 실행(이벤트 처리) }
+       
+            var heading= document.querySelector("#heading"); // 전체 이벤트 처리 구문 없을시 제어가 안 됨 => 에러 유발. F12(devtools) => Console에서 에러 메세지 확인.
+            heading.onmouseover=function() {
+                heading.style.color="red";
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    
+    <h1 id="heading">웹 개발자</h1>
+
+    <!-- *inline 방식으로 js 이벤트 처리
+         이벤트 속성(ex: onMouseOver) => 대/소문자 구분 없음
+         javascript code에서 이벤트 처리시 => 철저히 대/소문자 구분
+         <h1 id="heading" onMouseOver="heading.style.color='red';">웹 개발자</h1> -->
+
+    <script>
+        // id = heading인 h1태그(요소) 제어하기 위해 변수로 등록.
+        // 대/소문자 구분 주의
+        var heading= document.querySelector("#heading"); // 세미콜론 없어도 인식 가능. but 습관화 위해 사용하는 것이 좋음
+        
+        // heading 변수로 등록된 태그(요소)의 CSS 글자색 속성을 red로 변경
+        // heading.style.color="red";
+
+
+        // heading 변수(태그)에 마우스 포인터를 올리면(event) => hendling(처리): 글자색이 red로 변경
+        // heading.onMouseMver=function() { ... } => (X) why 대/소문자 구분 안 됨.
+        heading.onmouseover=function() {
+            heading.style.color = "red";
+        }
+        
+        // heading 변수(태그)에서 마우스 포인터를 벗어나게 하면(event) => hendling(처리): 글자색이 black(원래의 글자색)로 변경
+        heading.onmouseout=function() {
+            heading.style.color = "black";
+        }
+
+        // heading변수(태그)에 마우스 포인터를 누르면(클릭하면)(event) => hendling(처리): 글자색이 blue로 변경
+        heading.onclick=function() {
+            heading.style.color="blue";
+        }
+
+
+    </script>
+
+</body>
+</html>

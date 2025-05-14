@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // let score = 75;
+        // let result = score >= 60? "합격":"불합격";
+        // console.log("result :", result);
+
+        // score >= 60? console.log("합격") : console.log("불합격");
+
+        let score = 96;
+        let credit = 'F';
+
+        score = parseInt(score / 10);
+
+        //  if (score == 9 || score == 10) { 
+        //= if (score >= 9 && score <= 10) {          
+        // credit = (score == 9 || score == 10)? 'A' : score ==8? 'B' : score ==7? 'C' : score ==6? 'D' : 'F';
+
+            
+            credit = score == 10? 'A':
+                     score ==  9? 'A':
+                     score ==  8? 'B':
+                     score ==  7? 'C':
+                     score ==  6? 'D' : 'F';
+            
+        console.log("학점 :", credit);
+
+
+
+    </script>
+    
+</body>
+</html>

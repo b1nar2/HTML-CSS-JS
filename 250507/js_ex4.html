@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload= function() {
+
+            // 변수 선언(variable declaration/definition)
+            // var 변수 정의 => (다른 자료형으로도) 변수 재정의(re-define) 가능
+            // 1) var num; // 재정의
+            // 2) var num = 1; // 재정의
+            // 3) var num="JS" // 재정의
+            // num =1; // 재정의(X) 정의된 변수에 새로운 값을 대입
+            // num ="JS" // 재정의(X) 정의된 변수에 새로운 값을 대입
+            
+            // = : 우측에서 좌측 대입 연산자(operator) => 키워드의 일종
+            // 1, JS: 값(value), 리터럴(literal : 상수, 값)
+            // 리터럴: https://developer.mozilla.org/ko/docs/Glossary/Literal
+
+            // num : 변수명 => 식별자(indentifier)의 일종. 비교) 키워드(keyword)와 다름
+            // ex) let => 변수 생성(정의)하는 키워드(=예약어)
+            // let let;; // 변수명을 키워드로 명명(X)
+            
+            // var num;
+            
+            let num; // 4)
+
+            // num =1; // 변수 정의(생성, 선언) (X), 기존 변수에 신규 값을 대입
+            // num='JS'; // 변수 정의(생성, 선언) (X), 기존 변수에 신규 값을 대입
+            // let num; // 5) 중복 정의(X)
+            // Uncaught SyntaxError: Identifier 'num' has already been declared (at js_ex4.html:31:17)Understand this error
+            // let으로 선언한 변수는 기존 정의된 변수를 재정의 할 수 없다
+            // 변수의 지역성 보장. ex) java(고급 언어)의 지역변수 범위(scope)
+            // var와 다르게 변수 재정의(X) => 명확한 지역변수!
+            // 지역 범위(block scope) : { ... } => 중괄호
+
+            console.log("num :", num);
+            // 1) num : undefined(정의가 안 된) // 1), 4)
+            // 2) num : 1
+            
+            // 자료형((data) type) 확인 => typeof 연산자
+            // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof
+            console.log("num의 자료형:", typeof num);
+            // 1) num의 자료형 : undefined
+            // 2) num의 자료형 : number
+            // 3) num의 자료형 : string
+        }
+
+
+    </script>
+    
+
+</head>
+<body>
+
+</body>
+</html>

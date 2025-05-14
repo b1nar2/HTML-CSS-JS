@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+body {
+   margin: 0;
+}
+
+details {
+   margin: 10px;
+   width: 400px;
+}
+
+summary {
+
+   /*
+      플렉스박스,
+      가로 정렬 : 간격 고르게 하면서 좌우 양끝 요소들은 양끝 경계선에 붙여서 배치,
+      세로 정렬 : 중앙 정렬,
+      내부 간격 : 상하 15픽셀 좌우 30픽셀,
+      글꼴 크기 : 1.3em,
+      배경색 : #FFC000,
+      모서리 굴곡 처리 : 10픽셀,
+      마우스 커서 모양 : grab
+      
+      ※ 마우스 커서 모양 관련 : https://developer.mozilla.org/ko/docs/Web/CSS/cursor
+
+   */
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 30px;
+   font-size: 1.3em;
+   background-color: #FFC000;
+   border-radius: 10px;
+   cursor: grab;
+
+}
+
+/* 
+   메인 메뉴에 롤오버(rollover) 및 서브 메뉴 열릴(open) 때 효과 처리
+
+   글꼴색 : 흰색,
+   글꼴 굵기 : 700,
+   배경색 : #FF7F27
+*/
+summary:hover, details[open] summary { 
+
+   color: white;
+   font-weight: bold;
+   background-color: #FF7F27;
+}
+
+/* 
+   메인 메뉴 우측(뒷쪽: after) "+" 아이콘 부착 
+
+   내용 : +,
+   왼쪽 마진 : 40픽셀,
+   글꼴 크기 : 30픽셀,
+   글꼴색 : 흰색,    
+   트랜지션 : 트랜스폼(변환) 효과, 변환 지속시간 0.7초
+*/
+summary::after { 
+   
+   content: "+";
+   margin-left: 40px;
+   font-size:  30px;
+   color: white;
+   transition-duration: 0.7s; /*세부속성으로 표기*/
+   /*답안 비교 => transform: rotate(135deg); : 공통속성으로 표기*/
+
+
+}
+
+/* 
+   서브 메뉴가 펼쳐진(open) 후 우측 아이콘 움직임 조정 
+
+   트랜스폼 : 135도 회전(rotate)
+
+   ※ https://developer.mozilla.org/ko/docs/Web/CSS/transform
+*/
+details[open] summary::after  { 
+   transform: rotate(135deg);
+   
+
+}
+
+/* 서브 메뉴 패널 */
+.dish-menu {
+   padding: 5px;
+   line-height: 1em;
+   background: #fff;
+   text-indent: 30px;
+}
+
+/* 
+   서브 메뉴 버튼 링크 
+
+   밑줄 제거,
+   글꼴색 : #333
+*/
+.dish-menu a {
+   text-decoration: none;
+   color: #333;
+}
+
+/* 
+   서브 메뉴 버튼 링크 롤오버(rollover) 상태
+
+   text-decoxration: none;
+   글꼴색 : #ED1C24,
+   글꼴 굴기 : 굵게
+*/
+
+.dish-menu a:hover {
+
+   text-decoration: none;
+   color: #ED1C24;
+   font-weight: bold;
+}

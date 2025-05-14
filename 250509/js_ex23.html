@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    
+        let sum =0;
+        let i =1;
+
+        for (;;) { // 카운터 증감식을 빼면 무한반복문이 됨. => 오류
+            
+            /*
+            if (i <= 10) {
+                console.log("sum(합계) =", sum += i);
+                i++;
+            } else {
+                break;
+            }
+            */
+
+            
+            if (i <= 10) {
+                //console.log("sum(합계) =", sum += i++); // 정상 출력
+                //console.log("sum(합계) =", sum += ++i); // 합계 65 => 원치않은 결과
+                console.log("sum(합계) =", sum += i+=1); // 합계 65
+            } else {
+                break;
+            }
+            
+
+        } // for 끝
+
+        console.log(`1 ~ 10 까지의 합계는 ${sum} 입니다.`);
+    </script>
+</body>
+</html>

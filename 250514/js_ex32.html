@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" id="btn" 
+            name="btn-name" class="btn-class">버튼</button>
+
+    <button type="button" id="btn2" 
+            name="btn-name" class="btn-class">버튼2</button>
+
+    <script>
+
+        // 기명 함수
+        function action() {
+            console.log("action");
+        }
+
+        // 버튼 등록
+        // id로 제어
+        // let btn = document.getElementById("btn"); 
+
+        // 클래스명으로 제어
+        // let btn = document.getElementsByClassName("btn-class")[0];
+
+        // 이름으로 제어
+        // let btn = document.getElementsByName("btn-name")[0];
+
+        // 선택자(selector)로 제어
+        // let btn = document.querySelector("#btn");
+        // let btn = document.querySelector("[id='btn']");
+        // let btn = document.querySelector("[name='btn-name']");
+        // let btn = document.querySelector("[.'btn-class']");
+        // let btn = document.querySelector("[class='btn-class']");
+        // let btn = document.querySelectorAll("[class='btn-class']")[0]; => NodeList
+        // let btn = document.querySelectorAll("button[type='button']")[0]; // 태그명 추가=>명확해짐
+
+        // 태그명으로 제어
+        // let btn = document.getElementsByTagName("button")[0];
+
+        // old DOM level 스타일(지양)
+        // let btn = document.all['btn'];
+       
+
+        console.log("btn : ", btn);
+
+
+        //btn.onclick = function() {
+        // }
+
+        // btn.onclick = () => {           
+        // }
+
+        // btn.addEventListener('click', function() {
+        // = btn.addEventListener('click', () => {
+        //});
+
+        // callback(콜백) 함수 => 인자부에서 호출/ 정의되는 함수
+        // btn.addEventListener('click', action);
+        // btn.addEventListener('click', action()); // (X). 자동실행됨.
+
+        btn.addEventListener('click', () => {
+            action(); // (O)
+            // action; // (X)
+        });
+
+    </script>
+    
+</body>
+</html>

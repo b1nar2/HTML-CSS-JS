@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        window.onload=function() 
+        {
+           
+        // alert("팝업");
+        // confirm 결과(반환,리턴) 자료형 => boolean => true/fals (참/거짓)
+        // var confidim = confirm("회원정보를 삭제하시겠습니까")
+
+        // console.log("deleteCfm" + deleteCfm);
+        //F12 -> devetools(개발자 창) -> 콘솔(console) -> 메세징
+
+        // if(deleteCfm == true) {
+        // if (deletCfm) { // 위와 동일한 표현
+        // if (confirm("회원정보를 삭제하시겠습니까?"))
+        
+        /*
+        if (confirm("회원정보를 삭제하시겠습니까?") == true) {
+            alert("회원정보 삭제");
+        }
+        else {
+         // alert("회원정보 삭제 취소");
+         console.log("회원정보 삭제 취소")
+        }
+        */
+        
+        var str = prompt("입력", 1);
+        console.log("str : ", str);
+
+        // 사칙연산(덧셈)
+        // 자료형 변환(형변환 : casting) : string(정수 성분의 문자열) => 정수 변환
+        var sum = parseInt(str) + 2;
+        console.log("합계 : ", sum);
+
+        // NaN : Not A Number(숫자가 아니다) => 값(리터럴)
+
+        // 주의) 비추천 사항
+        // https://developer.mozilla.org/en-US/docs/Web/API/Document/write
+        // document.write("테스트");
+
+        // 기존의 HTML 내용
+        var oldContent = document.body.innerHTML; 
+        // innerHTML 속성 : 기존의 값을 가져옴 (get~ )
+
+        console.log("oldContent :", oldContent);
+        
+        var content = "테스트";
+        // document.append("테스트");
+
+        // 기존 내용 + 신규 내용 => 출력
+        // document.write(oldContent + content);
+        
+        // document.body.innerHTML = oldContent + content;
+        // 속성(set~~ : 대입)
+        
+        // document.querySelector("body").innerHTML = oldContent + content; // 동일 표현
+        // document.querySelector("body").innerHTML + content; //동일 표현
+        // "=" 연산자 앞의 것(전자)은 set~ (설정)
+        // "=" 연산자 뒤의 것(후자)은 get~ (기존 내용 가져옴)
+        // document.querySelector("body").innerHTML += content; //동일 표현(축약)
+
+    }
+
+
+
+    </script>
+
+
+</head>
+<body>
+    abcd
+</body>
+</html>
