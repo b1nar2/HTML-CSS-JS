@@ -179,7 +179,7 @@ window.onload = function() {
 
     const swiper = new Swiper('.swiper', {
 		// Optional parameters
-		direction: 'horizontal',
+		direction: 'horizontal', //가로방향
 		loop: true,
 
 		// If we need pagination

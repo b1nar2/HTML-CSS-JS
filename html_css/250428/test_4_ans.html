@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+		/* 상품 레이아웃 */
+		div#product_box {
+			width: 320px; 			/* 너비 : 320px */
+			height: 470px;			/* 높이 : 470 px */
+			/* background-color:cyan; */
+		}
+
+		/* 상품 이미지 */
+		div#product_image {
+			width: 280px;			/* 너비 : 280px */
+			height: 280px;			/* 높이 : 280px */
+			padding: 20px;			/* 내부 간격 : 20px */
+			/* background-color:blue; */
+		}
+
+		/* 상품 설명 및 로그인 페이지 이동 */
+		div#product_detail_login_move {
+			width: 280px;			/* 너비 : 280px */
+			height: 80px;			/* 높이 : 80px */
+			padding: 0 20px;    	/* 내부 간격 : 상하 0 좌우 20px */
+			/* background-color:orange; */
+		}
+
+		/* 상품 설명 */
+		div#product_detail {
+			float: left;			/* 플로팅 : 좌측 */
+			width: 230px;			/* 너비 : 230px */
+			height: 80px;			/* 높이 : 80px */
+			/* background-color:cyan; */
+		}
+
+		/* 로그인 페이지 이동 */
+		div#login_move {
+			float: left;			/* 플로팅 : 좌측 */
+			width: 50px;			/* 너비 : 50px */
+			height: 80px;			/* 높이 : 80px */
+			/* background-color:magenta; */
+		}
+
+		/* 상품 가격 */
+		div#product_price {
+			width: 280px;			/* 너비 : 280px */
+			height: 30px;			/* 높이 : 30px */
+			padding: 0 20px;		/* 내부 간격 : 상하 0 좌우 20px */
+			font-family: "Nanum Gothic";	/* 글꼴 : 나눔 고딕 */
+			font-size: 1.2em;		/* 글꼴 크기 : 1.2em */
+			/* background-color:pink; */
+		}
+
+		/* 배송비 */
+		div#shipping_price {
+			width: 280px;			/* 너비 : 280px */
+			height: 30px;			/* 높이: 30px */
+			padding: 0 20px;		/* 내부 간격 : 상하 0 좌우 20px */
+			font-size: 9pt;			/* 글꼴 크기 : 9pt */
+			/* background-color:purple; */
+		}
+
+		/* 구매 현황 및 장바구니 메뉴 */
+		div#purchase_state_cart_move {
+			width: 280px;			/* 너비 : 280px */
+			height: 40px;			/* 높이: 40px */
+			padding: 0 20px;		/* 내부 간격 : 좌우 20px 상하 0 */
+			/* background-color:green; */
+		}
+
+		/* 구매 현황 */
+		div#purchase_state {
+			float: left;			/* 플로팅 : 좌측 */
+			width: 230px;			/* 너비 : 230px */
+			height: 40px;			/* 높이: 40px */
+			font-size: 9pt;			/* 글꼴 크기 : 9pt */
+			/* background-color:yellow; */
+		}
+
+		/* 장바구니 메뉴 */
+		div#cart_move {
+			float: left;			/* 플로팅 : 좌측 */
+			width: 50px;			/* 너비 : 50px */
+			height: 40px;			/* 높이: 40px */
+			/* background-color:gray; */
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- 위의 주석(설명)을 참고하여 아래의 비어있는 레이어(div)를 완성하십시오 -->
+	<!-- 상품 패널 레이아웃 -->
+	<div id="product_box">
+
+		<!-- 상품 이미지 -->
+		<div id="product_image">
+			<img src="pro1.jpg" />
+		</div>
+		<!--// 상품 이미지 -->
+
+		<!-- 상품 설명 및 로그인 페이지 이동 -->
+		<div id="product_detail_login_move">
+
+			<!-- 상품 설명 -->
+			<div id="product_detail">
+				제벡스 상품명 제벡스 Z-3220 CCD 바코드스캐너 (유통/의류/문구)
+			</div>
+			<!--// 상품 설명 -->
+
+			<!-- 로그인 페이지 이동 -->
+			<div id="login_move">
+				<a href="#"><img src="login_btn.png" /></a>
+			</div>
+			<!--// 로그인 페이지 이동 -->
+
+		</div>
+		<!--// 상품 설명 및 로그인 페이지 이동 -->
+
+		<!-- 상품 가격 -->
+		<div id="product_price">
+			<b>36,000</b>원
+		</div>
+		<!--// 상품 가격 -->
+
+		<!-- 배송비 -->
+		<div id="shipping_price">
+			무료배송
+		</div>
+		<!--// 배송비 -->
+
+		<!-- 구매 현황 및 장바구니 메뉴 -->
+		<div id="purchase_state_cart_move">
+
+			<!-- 구매 현황 -->
+			<div id="purchase_state">
+				구매 1,102
+			</div>
+			<!--// 구매 현황 -->
+
+			<!-- 장바구니 메뉴 -->
+			<div id="cart_move">
+				<a href="#"><img src="cart_btn.png" /></a>
+			</div>
+			<!--// 장바구니 메뉴 -->
+
+		</div>
+		<!--// 구매 현황 및 장바구니 이동 메뉴 -->
+
+	</div>
+	<!--// 상품 패널 레이아웃 -->
+
+</body>
+
+</html>

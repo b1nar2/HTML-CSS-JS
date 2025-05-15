@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+
+        <select id="hobby" name="hobby">
+            <option value="1">야구</option>
+            <option>축구</option>  
+            <option selected value="2">배구</option> <!-- selected: 기본값으로 설정됨 -->
+            <option>농구</option>
+            <option>---------</option>
+        </select>
+
+        <hr>
+
+        <textarea id= "txt" name="txt" cols="20" rows="10" style="resize:none">
+        </textarea> <!--공식적인 폼태그 요소-->
+
+        <hr>
+
+        <div id="txt2" contenteditable="true"
+            style="width:300px; height:300px; overflow:auto; background-color:rgb(197, 210, 140);">
+
+        </div> <!-- 폼으로 전송이 안 됨, 자바스크립트 이용하면 전송 가능 -->
+
+        <input type="submit" value="전송" />
+
+    
+
+    </form>
+    
+</body>
+</html>

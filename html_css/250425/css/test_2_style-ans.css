@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* nanum-myeongjo-regular - korean_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nanum Myeongjo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nanum-myeongjo-v30-korean_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    /*파일 경로 헷갈리지 않게 주의( ../ =>상위폴더    ./=>현재폴더)*/
+}     
+
+div {
+    font: 1em /1.8em "Nanum Myeongjo"; /* line-height 적용시 "/" 표기 주의 */
+
+    word-spacing: 0.4em;
+    letter-spacing: 2px;
+    text-indent: 3em;
+    color: Sienna;
+    
+    height: 260px;
+    width: 800px;
+
+    background: Snow;
+    
+    border-width: 4px;
+    border-style: double;
+    border-color: RosyBrown;
+    padding: 15px 20px 15px 20px;
+}

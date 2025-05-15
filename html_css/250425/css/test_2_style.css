@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/*
+.fnt-style{
+    text-decoration: overline;
+}
+
+.bnt{
+    text-decoration:none;
+    color:rgb(253, 195, 129)
+}
+    */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+       
+    .border{
+        color: RosyBrown;
+        width: 2px;
+        collapse: separate;
+        style: double;
+        padding: 15px 20px;
+    }
+
+    
+    
+
+    .font{
+        
+        size: 1em;
+        color:Sienna;
+    }
+
+    font-family: "Nanum Myeongjo", serif;
+       
+        
+        letter-spacing: 2px;
+        word-spacing: 0.5em;
+        line-height: 1.8em;
+        text-indent: 3em;

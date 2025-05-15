@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>박스 모델(box) : 레이어(layer)</title>
+  <style>
+	div#box1 
+	{
+		position:absolute; /* 좌표체계 */
+		left:100px; /* x 좌표 */
+		top:50px; /* y 좌표 */
+		width:200px; /* 너비 */
+		height:200px; /* 높이 */
+		overflow:auto; /* 내용 넘침 대책 : 자동 스크롤바 생성 */
+		visibility:visible; /* "보이기"혹은 감추기 기능 */
+		/* display:none; */ /* 감추기 기능 */
+	   
+		margin:10px 10px; /* 외부와의 간격 */
+		padding:10px 10px; /* 내부와의 간격 */
+	   
+		/* 색체계(Red/Green/Blue/Alpha(투명도)) : ex) rgba(255, 000, 000, 0.5) */
+		background-color:#ccc; /* 배경색 */
+		background-image:url('jobs.jpg'); /* 배경그림 */
+		background-repeat:repeat-y; /* 배경그림 반복 여부 */
+		background-position: 50px 50px; /* 배경그림 위치 좌표 */
+	   
+		border:10px solid gray; /* 외곽선 */
+		border-color:yellow green red blue; /* 외곽선색 */
+		border-style:ridge; /* 외곽선 스타일 */
+	   
+		word-wrap:clip; /* 줄바꿈(개행) */
+		line-height:1.5em; /* 줄간격:줄간 */
+		font-size:1em; /* 글꼴 크기 */
+		word-spacing:1.2em; /* 단어간격:어간 */
+		letter-spacing:0.2em; /* 글자간격:자간 */                
+		font-weight:lighter; /* 글꼴 두께 */
+
+		background-clip:border-box;
+		/* CSS3 : 배경그림 표시범위 지정 :    
+			border-box, content-box, padding-box */
+		background-origin:border-box;
+		/* CSS3 : 배경그림 기준 위치 지정 :
+			border-box, content-box, padding-box */
+		background-size:70px 100px;
+	    /* CSS3 : 배경그림 크기 : 가로 * 세로 */
+		   
+		/* border-radius : 150px 20px 50px 150px */    
+	    /* CSS3 : 둥근 모서리 효과 일괄 지정 */
+		border-top-left-radius:150px;
+		border-top-right-radius:20px;
+		border-bottom-left-radius:50px;
+		border-bottom-right-radius:150px;
+		/* CSS3 : 둥근 모서리 효과
+		   firefox : 스크롤바 여부에 따라 적용 여부 달라짐 */
+
+		box-shadow: gray 10px 10px;
+		/* box-shadow:gray 10px 5px 10px inset;  */
+		/* CSS3 : 박스 음영(그림자) :
+		   inset -> 안쪽으로 음영(그림자) 형성 */
+   
+	}
+  </style>
+ </head>
+ <body>
+ 
+	<!-- 박스 모델(box model): div -->
+	<div id="box1">
+		"디자인은 제품이나 서비스의 연속적인 외층에 표현되는 인간 창조물의 영혼입니다."
+	Design is the fundamental soul of a human-made creation that ends up expressing itself
+	 in successive outer layers of the product or service. - 스티브 잡스 -
+	</div>
+ 
+ </body>
+</html>

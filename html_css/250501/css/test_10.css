@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+body {
+   margin:  10px;
+}
+
+ul {
+   column-count: 4; /* 4열(컬럼)로 패널 레이아웃 구성 */
+   padding: 20px;
+   list-style: none;
+}
+ 
+li {
+   break-inside: avoid; /* 패널 박스 출력시 컨텐츠 분할 현상 방지 */
+}
+ 
+ /* 
+   이미지 초기 상태 그레이레벨(graylevel, grayscale), 투명도(0.5) 지정    
+ */
+
+/* 
+   추가 문제-2) 이미지 초기 상태 조정 
+   : 세피아(sepia) 톤, 투명도 0.5
+*/
+img {
+   
+   display: block;
+   width: 100%;
+   height: auto;
+   border-radius: 30px;
+
+  /* filter: grayscale(); */
+   filter: sepia();
+   opacity: 0.5; /*투명도*/
+}
+
+/* 특정 이미지 롤오버(rollover) 이벤트 처리시 그레이스케일(회색톤)을 원래의 컬러톤으로 복원  */
+
+/* 추가 문제-1) 트랜지션을 활용하여 변환
+   조건- 변환 속성 : 투명도, 변환 지속시간 : 0.3초, 타이밍 효과(함수) : ease-in, 지연시간 : 0.2초
+*/
+
+img:hover {
+   opacity: 1; /*오답 교정=> 필터, 투명도 둘 다 복원*/
+   filter: none; /* = filter:saturate(); */
+   transition: all 0.3s ease-in 0.2s;
+   /* transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      transition-delay: 0.2s; */
+   
+/* 추가 문제-2) 트랜지션 변환 추가
+
+추가 조건) 너비/높이 : 120%, 외곽선 굴곡(radius) : 10% 30% 50% 70%   */
+
+width: 120%;
+height: 120%;
+border-radius: 10% 30% 50% 70% ;
+
+   }
+
+
+p {
+   font-size: 1vmax;
+   text-align: center;
+}

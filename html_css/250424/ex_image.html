@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+</head>
+<body>
+  <h1>레드향</h1>
+  
+  <!-- Do it! 이미지 크기를 지정해서 삽입하기 -->
+
+  <p>원래 크기의 이미지</p>
+  <!-- <img src="images/salad.jpg" alt="레드향"> -->
+  <!-- <img src="./images/salad.jpg" alt="레드향"> -->
+  
+  <!-- ../images/ : 현재 폴더(기준)보다 상위 폴더에 있는 images 폴더
+      <img src="../images/salad.jpg" alt="레드향">
+      <img src="./../images/salad.jpg" alt="레드향">
+      <img src="/images/salad.jpg" alt="레드향"> : 웹서버에 업로드시 기준경로(context path) 바로 밑 경로 -->
+  
+  <!-- 윈도우에서는 경로명의 대소문자를 구분하지 않음. 실제 웹서버에서는 (linux 환경) 대소문자 구분함. -->
+  <!-- <img src="IMAGES/salad.jpg" alt="레드향"> -->
+
+  <!-- 윈도우 경로/ live 서버에선 사용 못 함/ 폴더에서 브라우저로 로컬 로딩 가능
+      <img src="E:\KSZ\works\html_css1\html\images\salad.jpg" alt="레드향">
+      <img src="file:///E:/KSZ/works/html_css1/html/images/salad.jpg" alt="레드향" -->
+
+  <!-- 너비(width)/높이(height) 한쪽만 표기 => 너비/높이 비율(aspect ratio) 반영 -->
+  <!-- <img src="images/salad.jpg" width="300" height="300" alt="레드향"> -->
+  <!-- <img src="images/salad.jpg" width="30%" height="30%" alt="레드향"> -->
+  <!-- <img src="images/salad.jpg" width="300px" height="300px" alt="레드향"> (X) =>  px, em 표기XX -->
+  <img src="images/salad.jpg" style="width:50vh; height:50vh;" alt="레드향"> 
+  
+  <br>
+  
+  <!-- URL -->
+  <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA4MTZfMjk3%2FMDAxNzIzNzk4NTEwMDg1.9KV7w_Efeefw1-ZCXZEx-9icvvYbsJI0cbkzt9rrluUg.JCJh_VzU6IEV8SQGJVimQZU1mXQ1lR-YjVCDoWa3dnsg.JPEG%2F20240815%25A3%25DF155543.jpg&type=sc960_832"
+    width="200" heiht="200" alt="카스테라">
+
+</body>
+</html>
