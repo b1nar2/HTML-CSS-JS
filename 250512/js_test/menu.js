@@ -24,6 +24,14 @@ window.onload = () => {
 	// for (let i=0; i<sub_menus.length; i++) {
 	// 	sub_menus[i].style.visibility = "hidden";
 	// } // for
+	
+	// 해석
+	// for (let i=0; i<sub_menus.length; i++)
+	// let i=0; ==> 탐색을 시작할 인덱스 지정(배열의 첫 번째 인덱스, 0)
+	// i<sub_menus.length;  ==> i가 배열의 개수가 되기 전까지 (array.ength?? ==> https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+	// i++ ==> i를 하나씩 증가해라.
+	// sub_menus[i].style.visibility = "hidden"; ==> 모든 [i]에 스타일 먹이기
+	
 
     // 방법-2)
     // for (let sub_menu of sub_menus) {
