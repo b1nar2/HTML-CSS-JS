@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남성 의류 갤러리</title>
+
+    <!-- google icons :  https://fonts.google.com/icons -->
+    <!-- 
+        구글 아이콘 CDN(Content Delivery Network) 링크 
+        - Guide : https://developers.google.com/fonts/docs/material_symbols?hl=ko 
+    --> 
+    <!-- google symbols --> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&icon_names=favorite,home,search,settings" rel="stylesheet" /> -->
+    
+     <!-- CSV 파일 로드 라이브러리 : https://www.papaparse.com/ -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+     <link rel="stylesheet" href="grid_popup.css" />
+
+    <script src="grid_popup.js" charset="UTF-8"></script>
+
+
+    <!-- 의류 사이트 : https://www.kolonsport.com/Category/List/105010080000?productGenders=MALE&srsltid=AfmBOoqn_f8Vhq3xdKF5nR6IBbYBEojZRcG5rFUIzTxvrjkGyyJ3ekw0 -->
+
+
+
+    <!-- css, js 경로 변경 확인!! -->
+
+</head>
+<body>
+
+    <!-- 이미지 팝업 : 610px * 965px
+         header : 610px * 50px (창닫기)
+         body(이미지) : 610 x 910 (~ LM1/LM2.jpg) -->
+
+    <div id="img_popup">
+
+            <!-- header : 창닫기 버튼 -->
+             <div id="img_popup_header">
+
+                <span id="close_btn" class="material-symbols-outlined">
+                    close
+                </span>
+
+             </div>
+            <!-- // header -->
+
+            <!-- body : 확대 이미지 -->
+            <div id="img_popup_body">
+
+            </div>
+            <!-- // body -->
+
+
+     </div>
+    <!-- 이미지 팝업 -->
+
+    <!-- 다수의 btn : 상품 아이디들 -->
+     <button type ="button" id="btn_6MTCM25461NAY" title="6MTCM25461NAY">6MTCM25461NAY</button>
+     <button type ="button" id="btn_6MTCM25451LGY" title="6MTCM25451LGY">6MTCM25451LGY</button>
+     <button type ="button" id="btn_6MJGX25151DGR" title="6MJGX25151DGR">6MJGX25151DGR</button>
+    <!-- // 다수의 btn -->
+
+    <script>
+        let img_popup = document.getElementById("img_popup");
+
+        //팝업 초기 상태(은닉)     
+        img_popup.style.visibility = "hidden";
+        img_popup.style.width = 0;
+        img_popup.style.height = 0;
+
+        // let btn = document.getElementById("btn_6MTCM25461NAY"); => 버튼이 하나일 때
+
+        // 다수의 버튼 이벤트 처리
+        // let btns = document.querySelectorAll("button[title]");
+        let btns = document.querySelectorAll("button[id^='btn_']");
+
+        for(let btn of btns) {
+
+            btn.onclick = (event) => {
+                console.log("클릭 :", event.target.id);
+                console.log("클릭 :", event.target.title);
+
+                let pop_id=event.target.id;
+                // 순수 상품 아이디 abcd1234 추출
+                //pop_id=pop_id.split("_")[1];
+                pop_id=pop_id.substring(4);
+                console.log("pop_id :", pop_id);
+
+                // 이미지 삽입
+                // ex) 6MTCM25461NAY_LM1.jpg / 6MTCM25461NAY.jpg
+                // .pic/6MTCM25461NAY_LM1.jpg
+
+                let img_popup_body = document.getElementById("img_popup_body");
+                img_popup_body.innerHTML =`<img src="./pic/${pop_id}_LM1.jpg" />`;
+
+                img_popup.style.visibility="visible";// 팝업창 보이기
+
+            } // 창열기 버튼 이벤트 핸들러
+        } // for
+
+
+        //창닫기 버튼 이벤트 핸들러
+        let close_btn=document.getElementById("close_btn");
+        close_btn.addEventListener('click', () => {
+
+            console.log("창닫기");
+
+            // 팝업창 은닉(가리기)
+            // img_popup.style.width=0;
+            // img_popup.style.height=0;
+            img_popup.style.visibility="hidden";
+        });
+
+
+    </script>
+
+    <!-- 의류 갤러리 -->
+    <div class="wrap">
+    </div>
+    <!--// 의류 갤러리 -->
+    
+</body>
+</html>
