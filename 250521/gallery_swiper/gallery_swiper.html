@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남성 의류 갤러리</title>
+
+    <!-- google icons :  https://fonts.google.com/icons -->
+    <!-- 
+        구글 아이콘 CDN(Content Delivery Network) 링크 
+        - Guide : https://developers.google.com/fonts/docs/material_symbols?hl=ko 
+    --> 
+    <!-- google symbols --> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&icon_names=favorite,home,search,settings" rel="stylesheet" /> -->
+    
+    <!-- CSV 파일 로드 라이브러리 : https://www.papaparse.com/ -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+    
+    <!-- Swiper : https://swiperjs.com/get-started#use-swiper-from-cdn -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- CSS링크 -->
+    <link rel="stylesheet" href="gallery_swiper.css" />
+    <!-- JS링크 -->
+    <script src="gallery_swiper.js" charset="UTF-8"></script>
+
+
+    <!-- 의류 사이트 : https://www.kolonsport.com/Category/List/105010080000?productGenders=MALE&srsltid=AfmBOoqn_f8Vhq3xdKF5nR6IBbYBEojZRcG5rFUIzTxvrjkGyyJ3ekw0 -->
+
+
+
+    <!-- css, js 경로 변경 확인!! -->
+
+</head>
+<body>
+
+    <!-- 이미지 팝업 : 610px * 965px
+         header : 610px * 50px (창닫기)
+         body(이미지) : 610 x 910 (~ LM1/LM2.jpg) -->
+
+    <div id="img_popup">
+
+            <!-- header : 창닫기 버튼 -->
+             <div id="img_popup_header">
+
+                <span id="close_btn" class="material-symbols-outlined">
+                    close
+                </span>
+
+             </div>
+            <!-- // header -->
+
+            <!-- body : 확대 이미지 -->
+            <div id="img_popup_body">
+
+            </div>
+            <!-- // body -->
+
+
+     </div>
+    <!-- 이미지 팝업 -->
+
+    <!-- 의류 갤러리 -->
+
+    <!-- Swiper layout 적용 : https://swiperjs.com/get-started#add-swiper-html-layout -->
+    <div class="wrap">
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ... -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+  
+        </div>
+
+    </div>
+    
+    <!--// 의류 갤러리 -->
+    
+</body>
+</html>
