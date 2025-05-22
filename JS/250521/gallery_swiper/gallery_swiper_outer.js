@@ -102,7 +102,7 @@ window.onload = () => {
                        </div>
                        <!--// 상품 추천 별점 및 상품평 -->
 
-                       <!-- 신상품 여부 -->
+                       <!-- 신상품 여부 -->               
                        <div class="new-wear">
                            ${product[5] == 'O' ?
                            `<span class="new-wear-icon">신상품</span>` : ''}
