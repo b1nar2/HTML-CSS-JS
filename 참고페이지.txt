@@ -1,0 +1,35 @@
+<HTML - CSS - JS>
+
+MDN => https://developer.mozilla.org/ko/docs/Web
+모던js튜토리얼 => https://ko.javascript.info/
+html 태그? => https://webzz.tistory.com/
+부트스트랩 => https://getbootstrap.com/
+유니코드 => https://home.unicode.org/
+css레퍼런스 => https://cssreference.io/
+html레퍼런스 => https://www.w3schools.com/tags/default.asp
+html standard => https://html.spec.whatwg.org/multipage/
+
+TCP school => https://tcpschool.com/
+code2flow => https://app.code2flow.com/
+flex 개념 정리 => https://studiomeal.com/archives/197
+
+
+***************************************************************
+<REACT>
+
+리액트 참고 => https://ko.react.dev/reference/react
+리액트 참고2 => https://ko.legacy.reactjs.org/docs/glossary.html
+
+
+
+
+****************************************************************
+<etc ...>
+구글폰트,아이콘 => https://fonts.google.com/
+테스트 사이트 => https://jsfiddle.net/
+디자인 용어 => https://designbase.co.kr/dictionary/
+디자인 참고 => https://www.krds.go.kr/html/site/index.html
+위키독스 => https://wikidocs.net/
+윈도우 명령어 => https://learn.microsoft.com/ko-kr/windows-server/administration/windows-commands/windows-commands
+호환성 확인 => https://caniuse.com/
+
