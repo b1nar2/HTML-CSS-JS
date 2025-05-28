@@ -1,4 +1,4 @@
-import {Label, Input} from 'reactstrap'
+import {Label, Input, Button} from 'reactstrap'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,61 +15,74 @@ function BootstrapForm() {
     return (
         <div className="wrap">
 
-            {/* <!-- 이름 --> */}
-            <div className="input-fld-pnl" id="id-fld">
+            <div className="member-wrap">
 
-                {/* <label for="name">
-                    <span className="txt-label">이름</span>
-                    </label>
-                <input className="input-fld" type="text" id="name" name="name" required /> */}
+                {/* <!-- 이름 --> */}
+                <div className="input-fld-pnl">
+
+                    {/* <label for="name">
+                        <span className="txt-label">이름</span>
+                        </label>
+                    <input className="input-fld" type="text" id="name" name="name" required /> */}
 
 
-                {/* https://getbootstrap.com/docs/5.3/utilities/spacing/  => 간격 */}
-                <MdOutlinePerson size="1.5rem" color="#333" className="mt-2" />
+                    {/* https://getbootstrap.com/docs/5.3/utilities/spacing/  => 간격 */}
+                    <MdOutlinePerson size="1.5rem" color="orange" className="mt-2" />
 
-                <Label for="name" className="mt-2">이름</Label>
+                    <Label for="name" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>이름</Label>
 
-                <Input id="name" name="name" placeholder="이름" />
-            
-            </div>
-            {/* <!--// 이름 --> */}
-
-            {/* 메일 */}
-            <div className="input-fld-pnl">
-
-                <MdOutlineMailOutline size="1.5rem" color="#333" className="mt-2" />
+                    <Input id="name" name="name" placeholder="이름" />
                 
-                <Label for="name" className="mt-2">메일</Label>
+                </div>
+                {/* <!--// 이름 --> */}
 
-                <Input id="name" name="name" placeholder="메일주소" /> 
+                {/* 메일 */}
+                <div className="input-fld-pnl">
 
+                    <MdOutlineMailOutline size="1.5rem" color="orange" className="mt-2" />
+                    
+                    <Label for="email" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>이메일</Label>
+
+                    <Input id="email" name="email" type="email" placeholder="메일주소" /> 
+
+                </div>
+                {/* //메일 */}
+
+                {/* 전화번호 */}
+                <div className="input-fld-pnl">
+
+                    <MdPhoneAndroid size="1.5rem" color="orange" className="mt-2" />
+
+                    <Label for="phone" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>전화번호</Label>
+
+                    <Input id="phone" name="phone" placeholder="전화번호" />   
+                </div>
+                {/* //전화번호 */}
+
+                {/* 상담내용 */}
+                <div className="input-fld-pnl">
+
+                    <MdOutlineDescription size="1.5rem" color="orange" className="mt-2" />
+
+                    <Label for="description" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>상담내용</Label>
+
+                    <Input id="description" name="description" type="textarea" placeholder="상담내용" style={{resize:"none", height: "150px"}} />
+
+                </div>
+                {/* //상담내용 */}
+                
+                {/* 전송,취소버튼 */}
+                <div className="btn-fld-pnl mt-3">
+                    <div className="mx-3">
+                        <Button color="primary" outline>전송</Button>
+                    </div>
+                    <div>
+                        <Button color="info" outline>취소</Button>
+                    </div>
+
+                </div>
+                {/* //전송,취소버튼 */}
             </div>
-            {/* //메일 */}
-
-            {/* 전화번호 */}
-            <div className="input-fld-pnl">
-
-                <MdPhoneAndroid size="1.5rem" color="#333" className="mt-2" />
-
-                <Label for="name" className="mt-2">전화번호</Label>
-
-                <Input id="name" name="name" placeholder="전화번호" />   
-            </div>
-            {/* //전화번호 */}
-
-            {/* 상담내용 */}
-            <div className="input-fld-pnl">
-
-                <MdOutlineDescription size="1.5rem" color="#333" className="mt-2" />
-
-                <Label for="name" className="mt-2">상담내용</Label>
-
-                <Input id="name" name="name" placeholder="상담내용" />
-
-            </div>
-            {/* //상담내용 */}
-
-
         </div>
 
     )
