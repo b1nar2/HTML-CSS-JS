@@ -27,7 +27,7 @@ function BootstrapForm() {
 
 
                     {/* https://getbootstrap.com/docs/5.3/utilities/spacing/  => 간격 */}
-                    <MdOutlinePerson size="1.5rem" color="orange" className="mt-2" />
+                    <MdOutlinePerson size="1.5rem" color="FF7F27" className="mt-2" />
 
                     <Label for="name" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>이름</Label>
 
@@ -39,7 +39,7 @@ function BootstrapForm() {
                 {/* 메일 */}
                 <div className="input-fld-pnl">
 
-                    <MdOutlineMailOutline size="1.5rem" color="orange" className="mt-2" />
+                    <MdOutlineMailOutline size="1.5rem" color="FF7F27" className="mt-2" />
                     
                     <Label for="email" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>이메일</Label>
 
@@ -51,7 +51,7 @@ function BootstrapForm() {
                 {/* 전화번호 */}
                 <div className="input-fld-pnl">
 
-                    <MdPhoneAndroid size="1.5rem" color="orange" className="mt-2" />
+                    <MdPhoneAndroid size="1.5rem" color="FF7F27" className="mt-2" />
 
                     <Label for="phone" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>전화번호</Label>
 
@@ -62,7 +62,7 @@ function BootstrapForm() {
                 {/* 상담내용 */}
                 <div className="input-fld-pnl">
 
-                    <MdOutlineDescription size="1.5rem" color="orange" className="mt-2" />
+                    <MdOutlineDescription size="1.5rem" color="FF7F27" className="mt-2" />
 
                     <Label for="description" className="mt-2" style={{color:"orange", fontWeight:"bold"}}>상담내용</Label>
 

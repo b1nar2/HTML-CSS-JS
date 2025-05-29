@@ -6,6 +6,17 @@ for ... in
 
 for ... of
 
+-조건문-
+if(조건) {
+			조건이 참일 때 실행할 코드
+}
+
+if()
+
+
+
+
+
 
 
 const
@@ -13,3 +24,14 @@ const
 
 
 let
+
+
+
+UI에 애니메이션 추가는 CSS로 하는 게 좋음 => 성능때문
+one-wqy 애니메이션 => a->b 로 변하는 것. a.시작스타일, b최종스타일-
+
+display: none;와 visibility: hidden; 차이 => 유사하나 none은 없애는 것, hidden은 숨기는 것-
+
+버튼: 전송버튼 type="submit" 그 외 버튼 "button"
+
+중괄호 뒤 ; 생략가능. 소괄호 뒤 ; 생략불가
