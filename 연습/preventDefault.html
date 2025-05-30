@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>stopPropagation 예제</title>
+  <style>
+    #parent {
+      background-color: lightblue;
+      padding: 50px;
+    }
+    #child {
+      background-color: coral;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="parent">
+  부모 영역
+  <div id="child">자식 영역</div>
+</div>
+
+<script>
+  // 부모 클릭 이벤트
+  document.getElementById('parent').addEventListener('click', function () {
+    alert('부모가 클릭됨!');
+  });
+
+  // 자식 클릭 이벤트
+  document.getElementById('child').addEventListener('click', function (event) {
+    event.stopPropagation(); // 이벤트 전파 막기
+    alert('자식이 클릭됨!');
+  });
+</script>
+
+</body>
+</html>

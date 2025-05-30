@@ -27,7 +27,21 @@ function BootstrapForm() {
         console.log("phone :", phone);
         console.log("description :", description);
 
+        const response     
+            = await fetch(`http://localhost:3000/actionReactForm/${name}/${email}/${phone}/${description}`, 
+		{ 
+			method : "GET",
+			mode : "cors",
+			cache : "no-cache",
+			credentials: "same-origin"				   
+		});
+
+        const body = await response.json();
+        console.log("json body : " + body);
+        
     }//
+
+
 
     return (
         <div className="wrap">
