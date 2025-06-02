@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const dao = require("../db/DAO")
+
 var corsOptions = {
   origin: 'http://localhost:5173',
   optionsSuccessStatus: 200 
@@ -26,7 +28,25 @@ router.get('/:name/:email/:phone/:description', cors(corsOptions), function(req,
     let phone = req.params.phone;
     let description = req.params.description;
 
-    res.json(`{ 'name' : ${name}, 'email' : ${email}, 'phone' : ${phone}, 'description' : ${description} }`);
+    console.log("name : ", name);
+    console.log("email : ", email);
+    console.log("phone : ", phone);
+    console.log("description : ", description);
+
+
+    // 인자들의 객체 멤버필드화
+    let user = {};
+    user.name = name;
+    user.email = email;
+    user.phone = phone;
+    user.description = description;
+
+    dao.insertUser(user)
+    .then((msg) => {
+        console.log("msg :", msg);
+        res.json(`{"msg" : "${msg}" }`);
+    });
+
   });
   
   module.exports = router;

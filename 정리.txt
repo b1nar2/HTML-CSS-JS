@@ -41,3 +41,13 @@ display: none;와 visibility: hidden; 차이 => 유사하나 none은 없애는 �
 
 js 변수에 저장된 키를 통해 객체의 속성에 접근할 때 대괄호 표기법 사용.
 문자열이 아닌 변수 이름에는 따움표 표기 사용하면 안 됨.
+
+
+DAO 객체
+
+CRUD methods
+ =>	create(insert) reae(select) 
+	Update(update)/Delete(delete)
+	
+	record(tuple, row)
+	DML (Data Maniplation Language)
