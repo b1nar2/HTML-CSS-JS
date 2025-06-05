@@ -1,2 +1,2 @@
-const hello: string = "Hello T";
+const hello: string = "Hello Typescript world";
 console.log(hello)
