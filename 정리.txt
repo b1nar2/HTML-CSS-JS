@@ -51,3 +51,10 @@ CRUD methods
 	
 	record(tuple, row)
 	DML (Data Maniplation Language)
+
+
+
+parent class <---->  child class(type)
+super class <----> sub class (type)
+base class <---->  derived(파생) class(type)
+
