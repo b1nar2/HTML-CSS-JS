@@ -9,6 +9,7 @@ public class Worker implements Director {
 	// 선택적 오버라이딩 => 융통성!
 	@Override
 	public void defaultMethod() {
+		
 		Director.super.defaultMethod();
 		// 인터페이스의 default 메서드
 		System.out.println("부장님 일을 오버라이딩하다");

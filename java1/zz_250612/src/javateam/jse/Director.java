@@ -26,6 +26,10 @@ public interface Director {
 		System.out.println("인터페이스의 정적 메서드");
 	}
 	
+	default void defaultMethod() {
+		System.out.println("default 메서드");
+	}
+	
 	// 추상 메서드
 	// abstract void order();
 	void order();
