@@ -1,0 +1,4 @@
+방법 1) 라이브러리 폴더 생성 후 파일 가져오기
+
+방법 2) build path -> configure build path -> Libraries -> Classpath -> Add Jars
+방법 2-2) build path -> configure build path -> Libraries -> Classpath -> Add External Jars
