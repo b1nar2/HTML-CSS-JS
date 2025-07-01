@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  	
+  	<display-name>jsp_model2_template_demo</display-name>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>ControlURI</servlet-name>
+		<servlet-class>com.javateam.control.ControlURI</servlet-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<!-- 이 부분은 각자의 환경에 맞게 설정 -->
+			<param-value>E:\students\lsh\works\spring2\jsp_model2_template_demo\src\main\webapp\WEB-INF\CommandURI.properties</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ControlURI</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- JSP Access Permission Control : JSP 직접 접근 방지 -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>PreventViewingJSPs</web-resource-name>
+			<description>JSP Access Denied</description>
+			<url-pattern>*.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name></role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<!-- Encoding Filter -->
+	<!-- 
+	<filter>
+		<display-name>KoreanFilter</display-name>
+		<filter-name>KoreanFilter</filter-name>
+		<filter-class>filter.KoreanFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>KoreanFilter</filter-name>
+		<servlet-name>ControlURI</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>KoreanFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+
+	<!-- Error Processing Page -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/error.jsp</location>
+	</error-page>
+
+</web-app>
