@@ -21,7 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j // Slf4j 로그(log) 객체
 //@Log4j2 // Log4J 로그(log) 객체
 //@Log // Java 로그(log) 객체
-
 public class DemoController {
 
 	
@@ -31,8 +30,8 @@ public class DemoController {
 //	 => @Slf4j
 
 	// Log4J 로그(log) 객체
-//	private static final Logger logger
-//		= LogManager.getLogger();
+	private static final Logger log
+		= LogManager.getLogger();
 
 	
 	@GetMapping("/")
