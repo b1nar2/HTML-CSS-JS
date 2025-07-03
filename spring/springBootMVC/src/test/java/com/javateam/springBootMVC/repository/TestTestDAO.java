@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 class TestTestDAO {
 	
 	@Autowired
-	TestDAO dao;
+	TestDAO testDAO;
 
 	@Test
 	@Transactional
@@ -31,10 +31,21 @@ class TestTestDAO {
 									  .address("성남")
 									  .build();
 		
-		TestEntity testVO2 = dao.save(testVO);
+		TestEntity testVO2 = testDAO.save(testVO);
 		
 		assertEquals(testVO, testVO2);
 	
+	}
+	
+	/*전체 인원수 확인*/
+	
+	@Test
+	void testCount() {
+		
+		log.info("전체 인원수 확인");
+//		testDAO.count();
+		
+		assertEquals(201,testDAO.count());
 	}
 
 }

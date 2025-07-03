@@ -11,3 +11,5 @@ cd E:\KSZ\works\js\React
 
 @rem react proect 생성(make)
 npx create-react-app %1
+
+curl -X GET "http://localhost:8181/springBootMVC/rest2?id=zzzz1234" -H "accept: */*"
