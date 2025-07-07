@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sql_mapper.TestMapper">
+
+	<!-- 개별 회원정보 조회 -->
+	<select id="selectTestById" 
+			parameterType="String" 
+			resultType="com.javateam.demoMyBatis.domain.TestVO">
+	
+		SELECT * FROM test_tbl WHERE id = #{id}
+		
+	
+	</select>
+
+</mapper>

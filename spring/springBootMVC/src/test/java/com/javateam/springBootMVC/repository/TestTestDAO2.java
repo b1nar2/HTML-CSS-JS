@@ -106,16 +106,19 @@ class TestTestDAO2 {
 			log.info("findByNameContainsOrderByNameAsc test");
 			List<TestEntity> list
 				= testDAO.findByNameContainsOrderByNameAsc("김"); // 자동 "%" 처리 => "%김%"
-//			list.forEach(x -> {log.info(x +"");});
+			list.forEach(x -> {log.info(x +"");});
+			
+			
+			// 보충학습 필요!
 			
 			// 경계값 : 김나빈~김의수
-			String actualFirstName = list.get(0).getName();
-			String actualLastName = list.get(list.size()-1).getName();
-			
+//			String actualFirstName = list.get(0).getName();
+//			String actualLastName = list.get(list.size()-1).getName();
+//			
 //			assertEquals("김나빈", actualFirstName);
 //			assertEquals("김의수", actualLastName);
 
-			??
+//			??
 //			MarcherAssert.assertThat(actualFirstName, equalTo("김나빈"));
 //			assertThat(actualFirstName, equalTo("김나빈"));
 //			assertThat(actualLastName, is(equalTo("김의수")));
