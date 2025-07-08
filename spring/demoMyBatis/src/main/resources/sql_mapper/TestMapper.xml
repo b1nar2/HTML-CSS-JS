@@ -8,8 +8,16 @@
 			resultType="com.javateam.demoMyBatis.domain.TestVO">
 	
 		SELECT * FROM test_tbl WHERE id = #{id}
-		
 	
 	</select>
+	<!-- 개별 회원정보 삽입(생성) -->
+	<insert id = "insertTest"
+			parameterType="com.javateam.demoMyBatis.domain.TestVO">
+			
+			INSERT INTO test_tbl (id, name, address)
+			VALUES (#{id}, #{name}, #{address})
+			
+	</insert>
+
 
 </mapper>

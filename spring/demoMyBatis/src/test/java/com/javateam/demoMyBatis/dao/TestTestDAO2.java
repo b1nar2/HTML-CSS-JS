@@ -10,17 +10,26 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.javateam.demoMyBatis.dao.impl.TestDAOImpl2;
 import com.javateam.demoMyBatis.domain.TestVO;
 
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest
 @Slf4j
-class TestTestDAO {
+class TestTestDAO2 {
 	
 	@Autowired
-	@Qualifier("testDAO")
+	@Qualifier("testDAO2")
 	private TestDAO testDAO;
+	
+	// 생성자 주입 방식
+	//private final TestDAO testDAO;
+	
+//	@Autowired
+//	public TestTestDAO2(TestDAOImpl2 testDAO) {
+//		this.testDAO = testDAO;
+//	}
 	
 	/*
 	 * 개별 회원정보 조회 점검(test)
@@ -32,18 +41,17 @@ class TestTestDAO {
 	 */
 	@Test
 	void testSelectTestById() {
-		
-		TestVO expectedVO = TestVO.builder()
-								  .id("tzso6606")
-								  .name("송선희")
-								  .address("경기도 성남시 분당구 돌마로 47 이코노 샤르망 4층 그린아카데미별관 410호")
-								  .build();
-		
-		TestVO actualVO = testDAO.selectTestById("tzso6606");
-		
-//		assertEquals(expectedVO, actualVO);
-		assertThat(actualVO).isEqualTo(expectedVO);
-		
+	
+			TestVO expectedVO = TestVO.builder()
+									  .id("tzso6606")
+									  .name("송선희")
+									  .address("경기도 성남시 분당구 돌마로 47 이코노 샤르망 4층 그린아카데미별관 410호")
+									  .build();
+			
+			TestVO actualVO = testDAO.selectTestById("tzso6606");
+			
+//			assertEquals(expectedVO, actualVO);
+			assertThat(actualVO).isEqualTo(expectedVO);
 	}
 	
 	@Transactional
@@ -60,7 +68,6 @@ class TestTestDAO {
 		testDAO.insertTest(expectedVO);
 		
 		TestVO actualVO = testDAO.selectTestById("javateam");
-		
 		assertThat(actualVO).isEqualTo(expectedVO);
 	}
 

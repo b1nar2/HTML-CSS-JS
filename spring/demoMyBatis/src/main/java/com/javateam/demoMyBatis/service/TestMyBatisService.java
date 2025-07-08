@@ -1,8 +1,9 @@
-package com.javateam.demoMyBatis.dao;
+package com.javateam.demoMyBatis.service;
 
 import com.javateam.demoMyBatis.domain.TestVO;
 
-public interface TestDAO {
+public interface TestMyBatisService {
+
 
 	/*
 	 * 개별 회원정보 조회
@@ -15,6 +16,9 @@ public interface TestDAO {
 	/*
 	 * 개별 회원정보 삽입(생성)
 	 * @param testVO 회원정보
+	 * @return 저장여부
 	 * */
-	public void insertTest(TestVO testVO);
+	public boolean insertTest(TestVO testVO);
+	
+	
 }

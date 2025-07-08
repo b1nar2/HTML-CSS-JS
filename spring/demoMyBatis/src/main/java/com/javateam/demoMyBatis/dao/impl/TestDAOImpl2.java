@@ -6,34 +6,36 @@ import org.springframework.stereotype.Repository;
 
 import com.javateam.demoMyBatis.dao.TestDAO;
 import com.javateam.demoMyBatis.domain.TestVO;
+import com.javateam.demoMyBatis.mapper.TestMapper;
 
 import lombok.extern.slf4j.Slf4j;
-	
 
-// DAO component(Java Bean, domain)
-// DB = 영속(영구) 저장소(Persistent Repository)
-	
-@Repository("testDAO")
+@Repository("testDAO2")
 @Slf4j
-public class TestDAOImpl implements TestDAO {
+public class TestDAOImpl2 implements TestDAO {
 
-	// Spring Bean Container 자동으로 인스턴스(sqlSession)를 생성
 	@Autowired
 	private SqlSession sqlSession;
-//	private SqlSessionTemplate sqlSession;
 	
+	@Autowired
+	TestMapper testMapper;
+	
+	// TestMapper (Interface Mapper) 의존성 정보 주입(injection)
 	@Override
 	public TestVO selectTestById(String id) {
 		
-		log.info("--- TestDAO.selectTestById");
-		return sqlSession.selectOne("sql_mapper.TestMapper.selectTestById", id);
+//		return sqlSession.getMapper(TestMapper.class)
+//						 .selectTestById(id);
+		
+		return testMapper.selectTestById(id);
 	}
 	
 	@Override
 	public void insertTest(TestVO testVO) {
-		
-		sqlSession.insert("sql_mapper.TestMapper.insertTest", testVO);
+
+		// sqlSession.getMapper(TestMapper.class).insertTest(testVO);
+		// testMapper.insertTest(testVO);
+		testMapper.insertTest2(testVO);
 	}
-
+	
 }
-
