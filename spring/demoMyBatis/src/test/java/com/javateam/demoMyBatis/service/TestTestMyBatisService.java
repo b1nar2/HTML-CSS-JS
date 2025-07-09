@@ -19,7 +19,7 @@ class TestTestMyBatisService {
 	@Autowired
 	private TestMyBatisService testService;
 		
-	@Transactional
+	@Transactional // 테스트 트랜잭션 자동 롤백됨
 	@Rollback(true) // true => 실제 데이터에는 반영X. 테스트를 위함.
 	@Test
 	void testInsertTest() {
