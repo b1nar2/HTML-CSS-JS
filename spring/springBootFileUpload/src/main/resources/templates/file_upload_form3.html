@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>파일 업로드(일반 파일)</title>
+
+<script>
+window.onload = () => {
+
+	let addFile = document.getElementById("addFile");
+	
+	addFile.addEventListener('click', (event) => {
+		
+		let fileIndex = document.querySelector("#fileTable tr").children.length;
+		
+		let fileTable = document.getElementById("fileTable");
+		
+		fileTable.innerHTML += `<tr><td>
+					               <input type="file" name="files[${fileIndex}]" />
+					            </td></tr>`;
+					            
+        ////////////////////////////////////////////////////////////////////////////////
+
+        let fileFlds = document.querySelectorAll("input[type='file']"); // 파일 필드들
+		console.log("파일 필드 갯수 : " + fileFlds.length);
+		
+		fileFlds.forEach((element) => {
+
+			console.log("파일 필드 점검 : " + fileFlds.length);
+			
+			element.addEventListener('change', (event) => {
+				
+				// 업로드 파일 전송 한계량
+				let maxFileSize = "[[${maxFileSize}]]"; // 서버에서 전송된 내용
+							
+				let fileFld = event.currentTarget;
+				
+				console.log("file field name : ", fileFld.name);
+				
+				console.log("업로드 파일 크기 : ", fileFld.files[0].size);
+				console.log("업로드 파일 크기(KB) : ", (fileFld.files[0].size / 1024));
+				console.log("업로드 파일 크기(MB) : ", (fileFld.files[0].size / (1024 * 1024)));
+				
+				let fileSize = fileFld.files[0].size;					
+				
+				// 한계량 점검
+				console.log("업로드 파일 한계량 : " + maxFileSize);
+				
+				// 전송 한계량 : 5MB
+				
+				if (fileSize > maxFileSize) {
+					
+					alert(`업로드 파일 크기는 ${maxFileSize / (1024 * 1024)} MB 미만이어야 합니다.`);
+					fileFld.value = ''; // 파일필드 초기화
+				}
+				
+			});
+		});
+		
+	});
+	
+	// 파일 필드들 파일 업로드 제한량 점검	
+	// console.log("파일 필드 갯수 : " + fileFlds.length);
+	let fileFlds = document.querySelectorAll("input[type='file']"); // 파일 필드들
+		
+	fileFlds.forEach((element) => {
+		
+		console.log("파일 필드 점검 : " + fileFlds.length);
+		
+		element.addEventListener('change', (event) => {
+			
+			// 업로드 파일 전송 한계량
+			let maxFileSize = "[[${maxFileSize}]]"; // 서버에서 전송된 내용
+						
+			let fileFld = event.currentTarget;
+			
+			console.log("file field name : ", fileFld.name);
+			
+			console.log("업로드 파일 크기 : ", fileFld.files[0].size);
+			console.log("업로드 파일 크기(KB) : ", (fileFld.files[0].size / 1024));
+			console.log("업로드 파일 크기(MB) : ", (fileFld.files[0].size / (1024 * 1024)));
+			
+			let fileSize = fileFld.files[0].size;					
+			
+			// 한계량 점검
+			console.log("업로드 파일 한계량 : " + maxFileSize);
+			
+			// 전송 한계량 : 5MB
+			
+			if (fileSize > maxFileSize) {
+				
+				alert(`업로드 파일 크기는 ${maxFileSize / (1024 * 1024)} MB 미만이어야 합니다.`);
+				fileFld.value = ''; // 파일필드 초기화
+			}
+			
+		});
+		
+	}); 
+
+}
+</script>
+</head>
+<body>
+
+	<h3>Spring File Upload</h3>
+ 
+	<form id="frm" method="post" th:action="@{save4}" th:object="${uploadForm}" enctype="multipart/form-data">
+	 
+	    <p>전송할 파일(들)을 선택합니다.</p>
+	 
+	    <input id="addFile" type="button" value="전송 파일 추가" />
+	    
+	    <table id="fileTable">
+	        <tr>
+	            <td><input name="files[0]" type="file" /></td>
+	        </tr>
+	    </table>
+	    
+	    <br>
+	    <input type="submit" value="전송" />
+	
+	</form>
+
+</body>
+</html>

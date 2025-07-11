@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>업로드 성공</title>
+</head>
+<body>
+
+    <h3>Spring File Upload</h3>
+    <p>파일 전송 성공.</p>
+    
+    <div th:each="file, st : ${files}">
+    	<a th:text="${file}" 
+    	   th:href="@{'/download/' + ${file} + '/' + ${encodedFiles.get(st.index)}}"></a><br>
+    </div>
+    
+</body>
+</html>

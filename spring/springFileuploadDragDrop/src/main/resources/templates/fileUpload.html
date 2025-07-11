@@ -1,0 +1,183 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Drag/Drop FileUpload Test</title>
+<meta charset="UTF-8">
+
+<style>
+   .dragAndDropDiv {
+       border : 3px dotted #ccc;
+       width : 700px;
+       height : 300px;
+       color : #ccc;
+       text-align : center;
+       vertical-align : middle;
+       font-size : 2em;
+       display : table-cell;
+   }
+</style>
+
+<!-- axios : https://axios-http.com/kr/docs/intro -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+
+   window.onload = () => {	
+	   
+	   let objDragAndDrop = document.querySelector(".dragAndDropDiv");
+	   
+	   objDragAndDrop.addEventListener("dragenter", (event) => {
+		   		   
+           event.stopPropagation();
+           event.preventDefault();
+       });
+	   
+	   objDragAndDrop.addEventListener("dragover", (event) => {
+		   
+		   event.stopPropagation();
+           event.preventDefault();
+       });
+	   
+	   objDragAndDrop.addEventListener("drop", (event) => {
+           
+           event.preventDefault();
+           
+           let files = event.dataTransfer.files;
+        
+           handleFileUpload(files,objDragAndDrop);
+       });
+	   
+	   document.addEventListener("dragenter", (event) => {
+           
+		   event.stopPropagation();
+           event.preventDefault();
+       });
+	   
+	   document.addEventListener("dragover", (event) => {
+			
+		    event.stopPropagation();
+			event.preventDefault();
+       });
+       
+	   document.addEventListener("drop", (event) => {
+	
+           event.stopPropagation();
+           event.preventDefault();
+       });
+	   
+       /////////////////////////////////////////////////////////////////////////
+
+       function handleFileUpload(files,obj)
+       {
+          console.log("handleFileUpload");
+          
+          let fd;
+          let status;
+          
+     	  // 업로드 파일 전송 한계량
+		  let maxFileSize = "[[${maxFileSize}]]"; // 서버에서 전송된 내용
+          
+          for (var i = 0; i < files.length; i++) 
+          {
+               fd = new FormData();
+               fd.append('file', files[i]); // 전송할 파일 추가
+               
+               let fileSize = files[i].size;
+               
+               console.log("파일 사이즈(fileSize) : ", fileSize);
+                        
+               if (fileSize > maxFileSize) {
+            	   
+            	   // 업로드 파일 한계량 => 소숫점 2자리로 반올림 처리
+            	   let limitSize = Math.round(maxFileSize / (1024 * 1024) * Math.pow(10,2)) / Math.pow(10, 2);
+					
+				   alert(`업로드 파일 크기는 ${limitSize} MB 미만이어야 합니다.`);
+					
+               } else {
+				
+            	   sendFileToServer(fd,status); // 서버로 전송   
+			   }
+               
+          } // for
+          
+       } //
+        
+       /////////////////////////////////////////////////////////////////////////
+        
+       async function sendFileToServer(formData,status)
+       {
+       	   console.log("sendFileToServer");
+       	
+           let uploadURL = "/springFileuploadDragDrop/fileUpload/post"; // Upload URL
+           
+           let extraData = {}; // Extra Data
+           
+           // axios
+           const response = await axios({
+        	   
+        	   method: 'post',
+        	   url: uploadURL,
+        	   data : formData,
+        	   headers: {
+                   'Content-Type': 'multipart/form-data',
+               },
+               onUploadProgress: (event) => {
+            	   
+            	   // ProgressEvent : https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent
+            	   
+            	   var percent = 0;
+                   var position = event.loaded || event.position;
+                   var total = event.total;
+                   
+                   // https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/lengthComputable
+                   if (event.lengthComputable) {
+                   	   percent = Math.ceil(position / total * 100);
+                   }
+                   
+                   console.log('파일 업로드 진행률(%) : ', percent); 
+                      
+               },
+        	})
+        	.then(response => {
+                
+        		console.log('서버 응답 :', response.data);
+        		
+        		let json = response.data;        		
+                let result = "";
+                 
+                 if (json.encodedFileName != '') {
+              	   
+	                   console.log("json : " + json.msg);
+	                   console.log("encodedFileName : " + json.encodedFileName);
+	                   console.log("originalFilename : " + json.originalFilename);
+	                   
+	                   result = `${json.originalFilename} ${json.msg}`;
+	                   
+                 } else {
+                	 
+              	   	   result = `${json.msg}`;
+                 } //
+                 
+                 alert(result);
+            })
+            .catch(error => {
+            	
+                console.error('파일 업로드 실패 :', error);
+                
+                alert("파일 전송에 실패하였습니다");
+            });
+           
+       } //
+        
+   }
+</script>
+</head>
+ 
+<body>
+    
+    <!-- 파일 업로드 영역 -->
+    <div class="dragAndDropDiv">파일 업로드(드랙 &amp; 드랍 방식)</div>
+     
+</body>
+    
+</html>
