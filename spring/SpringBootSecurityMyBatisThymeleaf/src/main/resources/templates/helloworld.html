@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+			xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	인증/인가 정보 : <span sec:authentication="principal"></span><br>
+	<hr>
+
+	userPrincipal.name : <span sec:authentication="name"></span><br>
+	
+	<h3>Hello World!</h3>
+	
+	<h4>[[${message}]]</h4>
+	
+</body>
+</html>
