@@ -1,0 +1,202 @@
+<scott 문답>
+
+1. 사원정보 테이블(emp)에서 입사일자가 1982년 1월 1일 이후에 입사한 사원의 정보(사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호)를 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate >= '82-01-01';
+
+​///////////////////////// 같은 뜻 다른 답 ///////////////////
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate >= '82/01/01';
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate >= '01-JAN-82';
+
+​
+
+-- NLS : YYYY-MM-DD 로 적용한 경우
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate >= '1982-01-01​';
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate >= TO_CHAR(TO_DATE('01-JAN-82', 'dd-Month-YY'​, 'NLS_DATE_LANGUAGE = American'));
+
+​
+
+-- NLS : YYYY-MM-DD 로 적용한 경우
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate >= 
+TO_CHAR(TO_DATE('01-JAN-1982', 'dd-Month-YYYY', 'NLS_DATE_LANGUAGE = American'));
+
+​
+
+SELECT TO_DATE('01-JAN-82', 'dd-Month-YY', 'NLS_DATE_LANGUAGE = American')
+FROM dual;
+
+​
+
+SELECT TO_CHAR(TO_DATE('01-JAN-82', 'dd-Month-YY', 'NLS_DATE_LANGUAGE = American'))
+FROM dual;
+
+​
+
+​
+
+2. 사원정보 테이블(emp)에서 사원번호가 7902, 7788, 7566인 사원의 정보(사원번호, 성명, 담당업무, 급여, 입사일자)를 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,hiredate
+FROM emp
+WHERE empno IN (7902,7788,7566);
+
+​
+
+​
+
+3. 사원정보 테이블에서 입사일자가 1982년도에 입사한 사원의 정보를  사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호 순서로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE hiredate LIKE '1982%';
+
+​
+
+** NLS 날짜 포맷이 년도가 4자리로 설정된 경우는 위와 같이 하고 2자리로 설정된 경우는 "82%" 로 검색하면 됨. 
+
+​
+
+4. 보너스가 없는(NULL) 사원의 정보를 사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호 순으로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,comm,deptno
+FROM emp
+WHERE comm IS NULL;
+
+​
+
+​
+
+5. 급여가 1100 달러 이상이고 직업(job)이 'Manager'인 사원의 정보를  사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호 순서로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE sal >= 1100 AND job = 'MANAGER';
+
+​
+
+​
+
+6. 급여가 1100 달러 이상이거나 직무(job)가 'Manager'인 사원의 정보를 사원번호, 성명, 담당업무, 급여, 입사일자, 부서번호 순서로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,hiredate,deptno
+FROM emp
+WHERE sal >= 1100 OR job = 'MANAGER';
+
+​
+
+​
+
+7. 직무(job)가 Manager(관리자), Clerk(사원), Analyst(분석직)가 아닌 사원의 정보를 사원번호, 성명, 담당업무, 급여, 부서번호 순으로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal,deptno
+FROM emp
+WHERE job NOT IN ('MANAGER','CLERK','ANALYST');
+
+​
+
+​
+
+8. 직무(job)가 PRESIDENT(회장)이고 급여가 1500달러 이상이거나 직무가 SALESMAN(판매직원)인 사원의 정보를 사원번호, 이름, 업무, 급여 순으로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal
+FROM emp
+WHERE job = 'SALESMAN' OR job = 'PRESIDENT' AND sal >= 1500;
+
+​
+
+​
+
+9. 직무가 PRESIDENT(회장) 또는 SALESMAN(판매직원)이고 급여가 1500 달러 이상인 사원의 정보를 사원번호, 이름, 업무, 급여 순으로 출력하십시오.
+
+​
+
+SELECT empno,ename,job,sal
+FROM emp
+WHERE (job = 'SALESMAN' OR job = 'PRESIDENT') AND sal >= 1500;
+
+​
+
+​
+
+10. 입사일자 순으로 정렬하여 사원번호, 이름, 업무, 급여, 입사일자, 부서번호 순으로 출력하십시오.
+
+​
+
+SELECT hiredate,empno,ename,job,sal,deptno
+FROM emp
+ORDER BY hiredate;
+
+​
+
+​
+
+11. 가장 최근에 입사한 순으로 사원번호, 이름, 업무, 급여, 입사일자, 부서번호 순으로 출력하십시오.
+
+​
+
+SELECT hiredate,empno,ename,job,sal, deptno
+FROM emp
+ORDER BY hiredate DESC;
+
+​
+
+​
+
+12. 부서번호를 기준으로 정렬한 후 부서번호가 같을 경우 급여가 많은 순으로 정렬하여 사원번호, 성명, 업무, 부서번호, 급여 순으로 출력하십시오.
+
+​
+
+SELECT deptno,sal,empno,ename,job
+FROM emp
+ORDER BY deptno, sal DESC;
+
+​
+
+​
+
+13. 첫번째 정렬 기준은 부서번호로, 두번째 정렬 기준은 직무(업무)로, 세번째 정렬 기준은 급여가 많은 순으로 정렬하여 사원번호, 성명, 입사일자, 부서번호, 업무, 급여 순으로 출력하십시오.
+
+​
+
+SELECT deptno,job,sal,empno,ename,hiredate
+FROM emp
+ORDER BY deptno,job,sal DESC;

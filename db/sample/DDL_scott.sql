@@ -1,0 +1,29 @@
+CREATE TABLE DEPT (
+ DEPTNO              NUMBER(2) NOT NULL,
+ DNAME               CHAR(14),
+ LOC                 CHAR(13),
+ CONSTRAINT DEPT_PRIMARY_KEY PRIMARY KEY (DEPTNO));
+
+CREATE TABLE EMP (
+ EMPNO               NUMBER(4) NOT NULL,
+ ENAME               VARCHAR2(10),
+ JOB                 VARCHAR2(9),
+ MGR                 NUMBER(4) CONSTRAINT EMP_SELF_KEY REFERENCES EMP (EMPNO),
+ HIREDATE            DATE,
+ SAL                 NUMBER(7,2),
+ COMM                NUMBER(7,2),
+ DEPTNO              NUMBER(2) NOT NULL,
+ CONSTRAINT EMP_FOREIGN_KEY FOREIGN KEY (DEPTNO) REFERENCES DEPT (DEPTNO),
+ CONSTRAINT EMP_PRIMARY_KEY PRIMARY KEY (EMPNO));
+
+CREATE TABLE BONUS (
+ ENAME               CHAR(10),
+ JOB                 CHAR(9),
+ SAL                 NUMBER,
+ COMM                NUMBER);
+
+CREATE TABLE SALGRADE (
+ GRADE               NUMBER,
+ LOSAL               NUMBER,
+ HISAL               NUMBER);
+ 
