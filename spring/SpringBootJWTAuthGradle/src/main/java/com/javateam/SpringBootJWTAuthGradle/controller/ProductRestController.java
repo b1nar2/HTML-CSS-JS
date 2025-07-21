@@ -38,7 +38,7 @@ public class ProductRestController {
     public ResponseEntity<ProductResponseDto> getProduct(
     		@Parameter(description = "로그인 성공 후 발급 받은 access_token") 
 		 		@RequestHeader(value = "x-auth-token", required = true) String xAuthToken,
-		 	@Parameter(name="number", description="제품 번호", required = true) @RequestParam("number") long number) {
+		 	@Parameter(name="number", description="제품 번호", required = true) @RequestParam("number") long number) { 
     	
     	log.info("상품 조회(번호) : " + number); 
     	
@@ -66,18 +66,13 @@ public class ProductRestController {
 					 		@RequestHeader(value = "x-auth-token", required = true) String xAuthToken,
     					@RequestBody(required = true) ProductDto productDto) { 
     	
-					 	//@Parameter(name="name", description="제품명", required = true) @RequestParam("name") String name,
-					 	//@Parameter(name="price", description="가격(단가)", required = true) @RequestParam("price") int price,
-					 	//@Parameter(name="stock", description="재고량", required = true) @RequestParam("stock") int stock) { 
-    	// swagger 현재 버전에서 인자 전송 문제 발생 ! (버그 패치)
-    	
     	log.info("-------------- 상품 등록 --------------");
-    	
-    	// ProductDto productDto = ProductDto.builder().name(name).price(price).stock(stock).build();
     	
     	log.info("상품 등록 : " + productDto);
         long currentTime = System.currentTimeMillis();
         ProductResponseDto productResponseDto = productService.saveProduct(productDto);
+        
+        log.info("RestController productResponseDto : " + productResponseDto);
 
         log.info("[createProduct] Response Time : {}ms", System.currentTimeMillis() - currentTime);
         

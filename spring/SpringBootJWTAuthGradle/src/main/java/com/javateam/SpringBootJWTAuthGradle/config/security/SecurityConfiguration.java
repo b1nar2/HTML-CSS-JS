@@ -67,7 +67,7 @@ public class SecurityConfiguration {
 										.requestMatchers("/sign-api/sign-in", 
 														 "/sign-api/sign-up", 
 								                	     "/sign-api/exception").permitAll() // 가입 및 로그인 주소는 허용
-							            .requestMatchers(HttpMethod.GET, "/product/**").permitAll() // product로 시작하는 Get 요청은 허용
+							            .requestMatchers(HttpMethod.GET, "/product/**").authenticated()  // product로 시작하는 Get 요청은 허용
 							            .requestMatchers(HttpMethod.POST, "/product/**").authenticated() 
 							            .requestMatchers(HttpMethod.PUT, "/product/**").authenticated()
 							            .requestMatchers(HttpMethod.DELETE, "/product/**").authenticated()

@@ -14,6 +14,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -24,6 +25,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * JWT 토큰을 생성하고 유효성을 검증하는 컴포넌트 클래스 JWT 는 여러 암호화 알고리즘을 제공하고 알고리즘과 비밀키를 가지고 토큰을 생성
@@ -36,7 +38,6 @@ import org.springframework.stereotype.Component;
  * 참고) JWT token 생성 사이트 : https://www.javainuse.com/jwtgenerator
  */
 @Component
-// @RequiredArgsConstructor
 @Getter
 @Setter
 @Slf4j
