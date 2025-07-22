@@ -1,0 +1,89 @@
+1. 사원 아이디가 200 이상인 사원들의 모든 정보를 아이디를 중심으로 오름차순 정렬하여 출력하십시오.
+
+​
+
+SELECT * FROM employees
+
+WHERE employee_id >= 200
+
+ORDER BY employee_id ASC;
+
+​
+
+​
+
+2. 사원 아이디가 200 이상인 사원들의 모든 정보를 아이디를 중심으로 내림차순 정렬하여 출력하십시오.
+
+​
+
+SELECT * FROM employees
+
+WHERE employee_id >= 200
+
+ORDER BY employee_id DESC;
+
+​
+
+​
+
+3. 사원 아이디가 200 이상인 사원들의 모든 정보를 첫 이름(함자)을 중심으로 오름차순 정렬하여 출력하십시오.
+
+​
+
+SELECT * FROM employees
+
+WHERE employee_id >= 200
+
+ORDER BY first_name ASC;
+
+​
+
+​
+
+4. 사원 아이디가 200 이상인 사원들의 모든 정보를 이름과 급여를 기준으로 오름차순 정렬하여 출력하십시오.
+
+​
+
+SELECT * FROM employees
+
+WHERE employee_id >= 200
+
+ORDER BY first_name, salary ASC; 
+
+​
+
+참고)  위와 같은 경우는 다중 정렬이 그다지 특별한 효과가 없음.
+
+​
+
+참고) 위와 동일한 결과의 구문으로서 1, 2 의 의미는 언급된 컬럼(필드) 순서
+
+​
+
+SELECT * FROM employees
+
+WHERE employee_id >= 200
+
+ORDER BY 1, 2 ASC; 
+
+ 
+
+​
+
+5. 관리자 아이디, 이름, 급여 정보를 관리자 아이디와 급여를 기준으로 오름차순으로 정렬하여 출력하십시오.
+
+​
+
+SELECT manager_id, first_name, salary 
+
+FROM employees
+
+ORDER BY manager_id, salary ASC;  
+
+​
+
+참고) 다중 정렬이 유효한 경우
+
+​
+
+Tip) "공통 분모"에 해당되는 필드를 앞세워서 정렬(sorting)하는 것이 바람직합니다.

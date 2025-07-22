@@ -48,7 +48,7 @@ SELECT
     RPAD ('HAPPYDAY', 15),
     RPAD ('HAPPYDAY', 15, '!'),
     
-    RPAD ('010-1234-5678', 9, '*')
+    RPAD ('010-1234-', 13, '*')
     
 FROM DUAL;
 

@@ -1,0 +1,519 @@
+참고) 아래에서 사원 테이블은 hr 계정의 employees 테이블을 기준으로 합니다.
+
+​
+
+1. 사원들의 월급 총액을 출력하십시오.
+
+​
+
+SUM(DISTINCTSALARY) SUM(ALLSALARY) SUM(SALARY)
+
+-------------------        --------------        -----------
+
+             409908          691416              691416
+
+             
+
+참고) distinct를 사용하면 동일한 원급을 가진 사원들이 제외되고 총액 계산됨.
+
+all 키워드 사용한 총액보다 적게 출력됨
+
+​
+
+SELECT SUM(DISTINCT salary), SUM(ALL salary), SUM(salary)
+
+FROM employees;
+
+​
+
+​
+
+2. 사원들의 급여 총액과 평균을 출력하십시오.
+
+​
+
+SUM(SALARY)  AVG(SALARY)
+
+-----------       -----------
+
+     691416      6461.83178
+
+​
+
+SELECT SUM(salary), AVG(salary)
+
+FROM employees;
+
+​
+
+​
+
+3. 사원정보 중에서 최고 급여와 최저 급여를 출력하십시오.
+
+​
+
+MAX(SALARY) MIN(SALARY)
+
+-----------      -----------
+
+      24000        2100
+
+​
+
+SELECT MAX(salary), MIN(salary)
+
+FROM employees;
+
+​
+
+​
+
+4. 사원들 중에서 입사년도가 가장 빠른 사원과 가장 늦은 사원을 출력하십시오.
+
+​
+
+MIN(HIRE_DATE)  MAX(HIRE_DATE) 
+
+---------------     ---------------
+
+2001-01-13         2008-04-21     
+
+​
+
+-- 컬럼 포맷 맞추기 : sqlplus 에서 연습시 유효합니다.
+
+COL MIN(hire_date) FORMAT A15;
+
+COL MAX(hire_date) FORMAT A15;
+
+​
+
+SELECT MIN(hire_date), MAX(hire_date)
+
+FROm employees;
+
+​
+
+​
+
+5. 사원들 중에서 총 사원수와 상여금을 받는 사원들의 인원수를 출력하십시오.
+
+​
+
+COUNT(LAST_NAME)   COUNT(COMMISSION_PCT)
+
+----------------------    ---------------------
+
+             107                  35
+
+​
+
+SELECT COUNT(last_name), COUNT(commission_pct)
+
+FROM employees;
+
+​
+
+6. 사원들의 (중복을 배제한) 직무(업무) 수를 구하십시오.
+
+​
+
+COUNT(DISTINCTJOB_ID)
+
+----------------------------
+
+                   19
+
+​
+
+SELECT COUNT(DISTINCT job_id)
+
+FROM employees;
+
+​
+
+7. 아래와 같이 부서별 평균 급여(월급)를 구하십시오.
+
+​
+
+부서 번호    평균 월급
+
+----------     ----------
+
+        10       4400
+
+        20       9500
+
+        30       4150
+
+        40       6500
+
+        50      3475.55556
+
+        60       5760
+
+        70      10000
+
+        80      8955.88235
+
+        90      19333.3333
+
+       100      8601.33333
+
+       110      10154
+
+​
+
+부서 번호  평균 월급
+
+----------  ----------
+
+                 7000
+
+​
+
+SELECT department_id "부서 번호", AVG(salary) "평균 월급"
+
+FROM employees
+
+GROUP BY department_id
+
+ORDER BY 1; -- 참고로 "1"은 테이블의 컬럼 순서 = employee_id
+
+​
+
+​
+
+8. 아래와 같이 부서별 최고 월급과 최저 월급을 구하십시오.
+
+​
+
+부서 번호  최고 월급  최저 월급
+
+----------  ----------   ----------
+
+        10       4400       4400
+
+        20      13000       6000
+
+        30      11000       2500
+
+        40       6500       6500
+
+        50       8200       2100
+
+        60       9000       4200
+
+        70      10000      10000
+
+        80      14000       6100
+
+        90      24000      17000
+
+       100      12008       6900
+
+       110      12008       8300
+
+​
+
+부서 번호   최고 월급  최저 월급
+
+----------    ----------  ----------
+
+                 7000       7000
+
+​
+
+SELECT department_id "부서 번호", 
+
+       MAX(salary) "최고 월급",
+
+       MIN(salary) "최저 월급"
+
+FROM employees
+
+WHERE department_id IS NOT NULL
+
+GROUP BY department_id
+
+ORDER BY 1;
+
+​
+
+​
+
+9. 사원 테이블에서 부서별 월급 총액이 90,000 달러 이상인 부서만 조회하여 출력합니다.
+
+​
+
+DEPARTMENT_ID  SUM(SALARY)
+
+------------------   ----------
+
+           50          156400
+
+           80          304500
+
+​
+
+SELECT department_id, SUM(salary)
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING SUM(salary) >= 90000
+
+ORDER BY 1;
+
+​
+
+​
+
+10. 부서별 인원수가 6명 이상인 부서명을 조회하여 출력합니다.
+
+​
+
+DEPARTMENT_ID   COUNT(DEPARTMENT_ID)
+
+-------------------  ----------------------------
+
+           30                    6
+
+           50                   45
+
+           80                   34
+
+          100                    6
+
+​
+
+​
+
+SELECT department_id, COUNT(department_id)
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING COUNT(salary) >= 6
+
+ORDER BY 1;
+
+​
+
+11. 월급이 3,000 달러 이상인 사원들에 대해서만 부서별 월급 총액이 90,000 달러 이상인 부서를 조회하여 출력합니다.
+
+​
+
+DEPARTMENT_ID  SUM(SALARY)
+
+------------------  -----------
+
+           50         105200
+
+           80         304500
+
+​
+
+SELECT department_id, SUM(salary)
+
+FROM employees
+
+WHERE salary >= 3000
+
+GROUP BY department_id
+
+HAVING SUM(salary) >= 90000
+
+ORDER BY 1;
+
+​
+
+​
+
+12. 아래와 같은 결과가 출력될 수 있도록 SQL을 작성하십시오.
+
+​
+
+부서 번호  인원수   평균 급여  최저 급여  최대 급여  급여 총액
+
+----------  ---------- ----------  ----------   ----------  ----------
+
+        80         34       8956       6100      14000      304500
+
+        50         45       3476       2100       8200      156400
+
+        90          3      19333      17000      24000      58000
+
+       100          6       8601       6900      12008       51608
+
+        60          5       5760       4200       9000       28800
+
+        30          6       4150       2500      11000       24900
+
+       110          2      10154       8300      12008      20308
+
+        20          2       9500       6000      13000       19000
+
+        70          1      10000      10000      10000      10000
+
+                    1       7000       7000       7000         7000
+
+        40          1       6500       6500       6500        6500
+
+​
+
+ 부서 번호  인원수   평균 급여  최저 급여  최대 급여  급여 총액
+
+----------  ---------- ----------   ----------   ----------  ----------
+
+        10          1       4400        4400       4400        4400
+
+​
+
+SELECT department_id "부서 번호", 
+
+       COUNT(*) "인원수", 
+
+       ROUND(AVG(salary)) "평균 급여", 
+
+       MIN(salary) "최저 급여", 
+
+       MAX(salary) "최대 급여", 
+
+       SUM(salary) "급여 총액"
+
+FROM employees
+
+GROUP BY department_id
+
+ORDER BY SUM(salary) DESC;
+
+​
+
+​
+
+13. 직무 아이디가 "SA"로 시작하는 직무는 제외하고, 직무별로 월급여 합이 5,000 달러가 초과되는
+
+인원들의 현황을 아래와 같이 출력될 수 있도록 SQL을 작성하십시오.
+
+​
+
+​
+
+JOB_ID            급여
+
+----------      ----------
+
+SH_CLERK        64300
+
+ST_CLERK        55700
+
+FI_ACCOUNT    39600
+
+ST_MAN          36400
+
+AD_VP            34000
+
+IT_PROG          28800
+
+AD_PRES         24000
+
+PU_CLERK        13900
+
+MK_MAN         13000
+
+FI_MGR           12008
+
+AC_MGR          12008
+
+​
+
+JOB_ID             급여
+
+----------         ----------
+
+PU_MAN          11000
+
+PR_REP            10000
+
+AC_ACCOUNT    8300
+
+HR_REP            6500
+
+MK_REP           6000
+
+​
+
+SELECT job_id, SUM(salary) "급여"
+
+FROM employees
+
+WHERE job_id NOT LIKE 'SA_%'
+
+GROUP BY job_id
+
+HAVING SUM(salary) > 5000
+
+ORDER BY SUM(salary) DESC;
+
+​
+
+​
+
+14. 최고 급여가 2,900 달러를 초과하는 인원들을 부서별로 모아서 인원 현황을 출력하되
+
+부서 번호가 NULL 값인 경우는 0으로 출력될 수 있도록 아래와 같이 출력하십시오.
+
+​
+
+ 부서 번호  평균 급여   급여 총액
+
+----------   ----------    ----------
+
+       100       8601       51608
+
+        30       4150        24900
+
+         0       7000         7000
+
+        90      19333       58000
+
+        20       9500       19000
+
+        70      10000      10000
+
+       110      10154      20308
+
+        50       3476      156400
+
+        80       8956      304500
+
+        40       6500        6500
+
+        60       5760       28800
+
+​
+
+부서 번호  평균 급여   급여 총액
+
+----------- ----------    ----------
+
+        10       4400       4400
+
+​
+
+​
+
+SELECT NVL(department_id, 0) "부서 번호", 
+
+       ROUND(AVG(salary)) "평균 급여",
+
+       SUM(salary) "급여 총액"
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING MAX(salary) > 2900;
