@@ -60,6 +60,83 @@ SELECT SYSDATE,
     FROM DUAL;
     
 
+
+-- < 형변환 함수 >
+/*
+1) TO_CHAR(날짜 데이터[필수], '출력하길 원하는 문자 형태[필수]', 'NLS_DATE_LANGUAGE = language[선택]) -- 날짜 ,숫자 데이터를 문자열 데이터로 변환하는 함수.
+2) TO_NUMBER('문자열 데이터[필수]', '인식할 숫자 형태[필수]) -- 문자열 데이터를 숫자 데이터로 변환하는 함수.
+3) TO_DATE('문자열 데이터[필수], '인식할 날짜 형태[필수]') -- 문자열 데이터를 날짜 데이터로 변환하는 함수.
+*/
+
+-- 1) TO_CHAR
+SELECT SYSDATE,
+       TO_CHAR(SYSDATE, 'MONTH', 'NLS_DATE_LANGUAGE = KOREAN')
+    FROM DUAL;
+ 
+ 
+-- 2) TO_NUMBER
+/*자동으로 숫자 데이터로 형 변환이 일어남-> 암시적 형 변환*/
+SELECT 1300 - '1700',
+       '1300' + 1700
+    FROM DUAL;
+SELECT '1300' - '1700'
+    FROM DUAL;
+    
+/*숫자 사이에 있는',' 때문에 숫자로 변환되지 않음*/
+SELECT '1,300' - '1,700'
+    FROM DUAL;
+        
+SELECT TO_NUMBER('1,500','999,999') + TO_NUMBER('1,700', '999,999')
+    FROM DUAL;
+/*지정한 문자열 데이터가 인식할 숫자 형태(포맷)과 맞지 않아 오류 발생*/    
+SELECT TO_NUMBER('1500','999,999') + TO_NUMBER('1700', '999,999')
+    FROM DUAL;
+    
+
+-- 3) TO_DATE
+SELECT *
+     FROM EMP
+     WHERE HIREDATE > TO_DATE('1981/06/01','YYYY/MM/DD');
+
+
+-- <NULL 처리 함수>
+
+/* NVL(NULL인지 여부를 검사할 데이터 또는 열[필수], 앞의 데이터가 NULL일 때 반환할 데이터[필수])
+  : 열 또는 데이터를 입력. 해당 데이터가 NULL이 아니면 데이터를 그대로 반환, NULL 이면 지정한 데이터를 반환함.*/
+
+SELECT EMPNO, ENAME, SAL, COMM, SAL+COMM,
+       NVL(COMM,0),          -- COMM의 NULL값을 0으로 바꿈(NULL 처리 확인용)
+       SAL+NVL(COMM,0)       -- SAL + COMM 합계를 구하기 위해 NULL 값을 0으로 변환
+    FROM EMP;
+
+/* NVL2(NULL인지 여부를 검사할 데이터 또는 열[필수], 앞의 데이터가 NULL이 아닐 때 반환할 데이터[필수], 앞 데이터가 NULL일 때 반환할 데이터 또는 계산식[필수])
+  : 열 또는 데이터를 입력하여 해당 데이터가 NULL이 아닐 때와 NULL 일 때 출력 데이터를 각각 지정함.*/
+SELECT EMPNO, ENAME, COMM,
+       NVL2(COMM, 'O', 'X'),            -- COMM데이터 값이 NULL이 아닐 때 = 'O', NULL 일 때 = 'X'
+       NVL2(COMM, SAL*12+COMM, SAL*12)  -- COMM데이터에 NULL값이 없을 때 = SAL*12+COMM, NULL값이 있을 때 = SAL*12
+    FROM EMP;
+    
+    
+-- <CASE : 특정 조건에 다라 반환할 데이터를 설정할 때 사용>
+/*
+CASE 검사대상이 될 열 또는 데이터, 연산이나 함수의 결과[선택]
+    WHEN [조건1] THEN [조건1의 결괏값이 true일 때 반환할 결과]
+    WHEN [조건2] THEN [조건2의 결괏값이 true일 때 반환할 결과]
+    ...
+    WHEN [조건n] THEN [조건1의 결괏값이 true일 때 반환할 결과]
+    ELSE [위 조건1~조건n과 일치하지 않을 때 반환할 결과]
+END
+*/
+
+SELECT EMPNO, ENAME, JOB, SAL,
+  CASE JOB
+       WHEN 'MANAGER' THEN SAL*1.1
+       WHEN 'SALESMAN' THEN SAL*1.05
+       WHEN 'ANALYST' THEN SAL
+       ELSE SAL*1.03
+  END AS UPSAL
+  FROM EMP;
+
 -------------------------------------------------------------------------
 /*문제풀이*/
 
