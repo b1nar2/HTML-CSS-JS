@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="38A6018C-B0C8-7617-6DA4-FC50AF441F8E" name="massage_tbl">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:28:04 UTC</createdTime>
+<ownerDesignName>massage</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<abbreviation>msg</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="message_id" directorySegmentName="seg_0" id="053B3D82-4445-F115-9CD6-CAC1ED1E32A8">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:32:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[문자 고유 이력 ID]]></commentInRDBMS>
+<ownerDesignName>massage</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" directorySegmentName="seg_0" id="AF32920D-C881-5E29-DB94-34D22E2D0B45">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:36:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[문자 수신자 ID]]></commentInRDBMS>
+<ownerDesignName>massage</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resv_id" directorySegmentName="seg_0" id="4F6FD3CA-C934-C427-CC56-44BE5642D5D1">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:41:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[관련 예약 ID]]></commentInRDBMS>
+<ownerDesignName>massage</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="closed_day_id" directorySegmentName="seg_0" id="6CBCFD65-5732-ED2D-8DAD-4C9BEA7FC7F7">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:43:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[관련 휴관일 ID]]></commentInRDBMS>
+<ownerDesignName>massage</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="message_type" directorySegmentName="seg_0" id="B77128DA-0E63-A66D-4C62-CDBC910EA778">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:44:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[문자 분류 유형]]></commentInRDBMS>
+<ownerDesignName>massage</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E1E452C1-E266-92B3-5C48-61877D095AA9" name="massage_tbl_PK">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 02:32:28 UTC</createdTime>
+<ownerDesignName>massage</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="053B3D82-4445-F115-9CD6-CAC1ED1E32A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
