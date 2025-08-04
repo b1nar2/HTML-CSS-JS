@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="message" id="B041C132-1D3D-C6BE-5144-C39E68F008DA" version="3.5">
-<createdBy>Administrator</createdBy>
-<createdTime>2025-08-04 02:24:36 UTC</createdTime>
-<ownerDesignName>massage</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>B041C132-1D3D-C6BE-5144-C39E68F008DA</designId>
-</OSDM_Design>

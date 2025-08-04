@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="closed_day" id="9DB2EB4F-C340-87E4-0850-ABB4C9CDD8ED" version="3.5">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:22:29 UTC</createdTime>
+<ownerDesignName>closed_day</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9DB2EB4F-C340-87E4-0850-ABB4C9CDD8ED</designId>
+</OSDM_Design>

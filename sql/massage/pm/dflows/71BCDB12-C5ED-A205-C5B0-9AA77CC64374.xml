@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<DataFlowDesign class="oracle.dbtools.crest.model.design.process.DataFlowDesign" name="Data Flow Diagram_1" id="71BCDB12-C5ED-A205-C5B0-9AA77CC64374" mainViewID="68A087BC-D63F-3B89-DD59-CFD0D32B674A" topLevel="true">
-<createdBy>Administrator</createdBy>
-<createdTime>2025-08-04 02:59:06 UTC</createdTime>
-<ownerDesignName>massage</ownerDesignName>
-<shouldBeOpen>true</shouldBeOpen>
-</DataFlowDesign>

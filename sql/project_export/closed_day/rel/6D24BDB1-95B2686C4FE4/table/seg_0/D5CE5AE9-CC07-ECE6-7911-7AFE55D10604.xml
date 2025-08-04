@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D5CE5AE9-CC07-ECE6-7911-7AFE55D10604" name="closed_day_tbl">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:23:40 UTC</createdTime>
+<ownerDesignName>closed_day</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<abbreviation>closed</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="closed_day_id" id="702CA17B-6195-55DC-694C-28FFDC394D8F">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:26:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴무일 고유 번호]]></commentInRDBMS>
+<ownerDesignName>closed_day</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="facility_id" id="38AF7539-98A2-9542-6357-4330B9B6A840">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:26:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[대상 시설 ID]]></commentInRDBMS>
+<ownerDesignName>closed_day</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="closed_date" id="7D9E0870-8800-2C58-5EE7-83AC09B60CAC">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:26:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴무일 날짜]]></commentInRDBMS>
+<ownerDesignName>closed_day</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reason" id="421EF6A6-08CA-1B8F-85C5-FDDE274CFF09">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:26:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴무 사유]]></commentInRDBMS>
+<ownerDesignName>closed_day</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78BF55CC-FB85-BA94-3D80-8D5BBD594612" name="closed_day_tbl_PK">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:26:45 UTC</createdTime>
+<ownerDesignName>closed_day</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="702CA17B-6195-55DC-694C-28FFDC394D8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

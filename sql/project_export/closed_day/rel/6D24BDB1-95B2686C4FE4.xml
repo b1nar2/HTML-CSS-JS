@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="closed_day_tbl" id="6D24BDB1-1624-8C4F-8EFB-95B2686C4FE4" mainViewID="CD73090E-6FDD-065C-CD48-751A0554675B">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-04 05:22:29 UTC</createdTime>
+<ownerDesignName>closed_day</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>
