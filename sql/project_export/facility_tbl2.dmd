@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="facility_tbl2" id="0E28D522-417A-254B-6830-5B47E591D9D5" version="3.5">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 02:58:02 UTC</createdTime>
+<ownerDesignName>facility_tbl2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>0E28D522-417A-254B-6830-5B47E591D9D5</designId>
+</OSDM_Design>
