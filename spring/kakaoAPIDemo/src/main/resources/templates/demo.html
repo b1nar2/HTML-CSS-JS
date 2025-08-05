@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+
+<script th:src="@{/webjars/jquery/3.6.3/jquery.min.js}"></script>
+<script>
+$(function() {
+
+	// https://developers.kakaomobility.com/docs/navi-api/directions/
+	// 
+	// curl -v -X GET "https://apis-navi.kakaomobility.com/v1/directions?origin=127.11015314141542,37.39472714688412&destination=127.10824367964793,37.401937080111644&waypoints=&priority=RECOMMEND&car_fuel=GASOLINE
+	//			&car_hipass=false&alternatives=false&road_details=false" 
+	//	 -H "Authorization: KakaoAK KAKAO REST API KEY"
+	console.log("테스트");
+	
+	$("#btn").click(function(e){
+		
+		$.ajax({
+			 url : 'http://localhost:8181/kakaoAPIDemo/proxy/127.11015314141542/37.39472714688412/127.10824367964793/37.401937080111644',
+			 type : 'get',
+			 dataType:'text',
+			 success : function(data) {
+				 
+				 // 서버 => 클라이언트
+				 console.log("data : " + data);	
+
+			 } // success
+		 	
+		 }); // ajax
+		 
+	}); //
+});
+</script>
+</head>
+<body>
+<a id="btn" th:href="@{#}">전송</a>
+</body>
+</html>

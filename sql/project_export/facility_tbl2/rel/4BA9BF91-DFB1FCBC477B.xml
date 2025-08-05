@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="facility_tbl" id="4BA9BF91-575C-28BD-73AD-DFB1FCBC477B" mainViewID="DCB2B13C-F598-54C4-BA4B-DDBAF1CB14CE">
-<createdBy>Administrator</createdBy>
-<createdTime>2025-08-05 02:58:21 UTC</createdTime>
-<ownerDesignName>facility_tbl2</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
-</relationalModel>

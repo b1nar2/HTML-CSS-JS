@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7061699C-FD61-750F-E654-F1AFC6676B7B" name="facility_tbl">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:02:13 UTC</createdTime>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<abbreviation>facility</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="facility_id" id="79982501-91DD-E018-117A-ED4CDC26BFCF">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[시설 고유 번호]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="4588861A-1536-0D8B-3DF0-CAA28C094AA4">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[시설명]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="instructor_id" id="9D4EC529-DEB5-C74E-FE69-955E2DB2E488">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[강사명(관리자ID)]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="405E9236-595F-E2BB-3054-584A6686FECC">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[시설 연락처]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="content" id="6901382C-52FC-26F9-E934-A68D4839E300">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[설명 HTML 내용]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image_path" id="7D7B23F6-304C-CAC5-BE69-504A3362E7A3">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[이미지 경로]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="max_person" id="E0EFB79D-CF69-EA7E-7F70-8844D895F5DC">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[최대인원]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="is_available" id="17546C07-AC2D-48F4-BED2-A8A4667A5639">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[사용 가능 여부]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reg_date" id="36CADF94-6371-3C64-4FB6-A644D142D1EF">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:30:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[시설 등록일]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<constraintName>facility_tbl_reg_date</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mod_date" id="6ABDC0BD-8DFA-E07A-1954-D63B96621408">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:30:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[시설 수정일]]></commentInRDBMS>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FFDAC6D9-7280-6FFE-F461-C2E8871649C7" name="facility_tbl_PK">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:03:46 UTC</createdTime>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79982501-91DD-E018-117A-ED4CDC26BFCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="facility_tbl_is_available" directorySegmentName="seg_0" id="967A6209-54C5-D46E-38AD-98FAFFF90CF1">
+<createdBy>Administrator</createdBy>
+<createdTime>2025-08-05 03:21:20 UTC</createdTime>
+<ownerDesignName>facility_tbl</ownerDesignName>
+<rule><![CDATA[is_available in ('Y', 'N')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

@@ -1,0 +1,10 @@
+-- 카카오 길찾기 API
+-- https://developers.kakaomobility.com/docs/navi-api/directions/
+
+https://developers.kakaomobility.com/docs/navi-api/directions/#%EC%9A%94%EC%B2%AD-%EC%BD%94%EB%93%9C-%EC%98%88%EC%A0%9C
+
+
+curl -v -X GET "https://apis-navi.kakaomobility.com/v1/directions?origin=127.11015314141542,37.39472714688412&destination=127.10824367964793,37.401937080111644&waypoints=&priority=RECOMMEND&car_fuel=GASOLINE&car_hipass=false&alternatives=false&road_details=false" -H "Authorization: KakaoAK 	KAKAO REST API KEY"
+
+
+ 
