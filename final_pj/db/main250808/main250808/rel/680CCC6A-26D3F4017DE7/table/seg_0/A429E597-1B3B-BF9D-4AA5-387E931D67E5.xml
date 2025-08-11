@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A429E597-1B3B-BF9D-4AA5-387E931D67E5" name="board_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:38:47 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<importedID>369D0D3D-9CA4-1275-0CBD-7EB3DE1E6B26</importedID>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="board_id" id="AA40F94F-0F70-E846-3A21-700A1A434E8D">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:38:47 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<importedID>E7FBAA7A-7FC0-EB13-8222-959EAB969E76</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="board_title" id="0D73E40C-4CDB-AD85-05A2-34E3E2332ADF">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 02:11:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시판 이름(공지사항 등)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="board_content" id="827ADE0A-949A-652D-8650-1B99C470115A">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 02:17:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시판 상단내용]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="board_use" id="D958E186-4C20-6CE8-F398-90D417365B5A">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 02:12:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[사용여부(활성화/비활성화)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintComment><![CDATA[사용여부(기본값 'Y')]]></constraintComment>
+<constraintName>board_use_default</constraintName>
+<constraintNotes><![CDATA[사용여부(기본값 'Y')]]></constraintNotes>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>&apos;Y&apos; </defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="board_reg_date" id="A91FCDC1-04D9-BF4C-BA52-62BE982F9CD4">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:38:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[생성일자(기본값 SYSDATE)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<importedID>6185804E-73E1-BAF1-1A18-C9F61C88A7AF</importedID>
+<constraintComment><![CDATA[생성일자(기본값 SYSDATE)]]></constraintComment>
+<constraintName>board_reg_date_default </constraintName>
+<constraintNotes><![CDATA[생성일자(기본값 SYSDATE)]]></constraintNotes>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="board_mod_date" id="75BFE26C-7262-5D37-746A-C5F4E5205846">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 02:18:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[수정일자(수정시 갱신)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" id="02E681E1-D8F5-5BB5-E7E6-7C6447C96846">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 03:40:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[회원id]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE11C2E7-ED2C-07BA-019B-2FF69DA602E1" referredColumn="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D53B0C1B-3FFB-D165-DFCF-69C5C7596659" name="board_tbl_PK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:38:47 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<importedID>9520B987-93DA-3F99-A889-C7DC44388845</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA40F94F-0F70-E846-3A21-700A1A434E8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C7F1681-F5DC-5BD4-D89B-74E961FA95F3" name="board_id_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:06:07 UTC</createdTime>
+<comment><![CDATA[게시판id 중복금지]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA40F94F-0F70-E846-3A21-700A1A434E8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6AF7538A-7AF2-CAFE-3162-9FEE8F9CFB14" name="board_tbl_member_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:25:48 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02E681E1-D8F5-5BB5-E7E6-7C6447C96846"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="board_use_CH" directorySegmentName="seg_0" id="C9B92A32-2BD4-9EE1-AA5B-F06417D9182D">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 06:25:20 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[board_use in ('Y','N')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

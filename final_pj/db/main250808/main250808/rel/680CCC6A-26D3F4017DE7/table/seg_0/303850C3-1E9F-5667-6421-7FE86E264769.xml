@@ -1,0 +1,284 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="303850C3-1E9F-5667-6421-7FE86E264769" name="paylog_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:32:23 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="paylog_id" id="55089779-BDC4-6183-4DA5-BF0EA9F81356">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:33:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제 로그 고유번호(PK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_id" id="DA89ED18-51EF-094B-C20D-C20813C8B390">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:33:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제 PK(FK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="449332B1-12ED-E0B3-DE81-1A07B3189147" referredColumn="1ECCD6AA-D250-DACB-23F3-5BCBEEA941F0"/>
+</associations>
+</Column>
+<Column name="member_id" id="C6BEAE40-7B76-8246-6C8C-E98507271FD1">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:34:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제자 회원 ID(FK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54FDAD60-3A7E-BF22-4139-826C8EACC834" referredColumn="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</associations>
+</Column>
+<Column name="card_id" id="ACD633C5-779D-469F-2581-663D6FD97B3C">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:34:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제에 사용된 카드 ID (FK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="428C6BBA-E54E-8717-AA55-2100CA55A699" referredColumn="ADDC0FBA-143C-DCF3-A280-895939D25486"/>
+</associations>
+</Column>
+<Column name="account_id" id="5DBCCF2F-3DE8-9010-F99F-F3CD3C5925B7">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:34:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제에 사용된 카드 ID (FK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="419176A5-8C05-D441-C433-7F2AE39FCB34" referredColumn="330B925C-1E27-EB2A-1FDB-EE57B8073562"/>
+</associations>
+</Column>
+<Column name="resv_id" id="E9605803-5C77-6CCE-18BF-B3BB7DE574D2">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:35:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[예약 ID(예약과 연동 시)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98B15787-C757-7814-0AEA-EBF0A3ED1A6E" referredColumn="47A8512E-B766-4663-539B-30F4B0A0FF81"/>
+</associations>
+</Column>
+<Column name="paylog_type" id="B5E518D1-C345-B2D6-45B6-EBE82744BEDD">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:35:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제 동작 유형(결제/취소 등)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintComment><![CDATA[ NOT NULL 제약조건 덕분에 오류 발생 방지용]]></constraintComment>
+<constraintName>action_type_default</constraintName>
+<constraintNotes><![CDATA[ NOT NULL 제약조건 덕분에 오류 발생 방지용]]></constraintNotes>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<defaultValue>&apos;결제&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_before_status" id="34D3D80C-3D75-7287-669C-3374AD102B4B">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:36:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[변경 전 결제 상태]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_after_status" id="11DDB406-8D65-AB2C-19B1-A6CA7EEABDEE">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:36:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[변경 후 결제 상태]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_money" id="2DA446AF-B573-EA5D-9C6F-6FFA92769C0B">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:37:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제 금액]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_method" id="A5D5799D-9E84-5624-CA49-6C8319FD5E89">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:37:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제 방식(카드/계좌)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_manager" id="F73F021B-100A-19B6-8D22-504AC7DD46B8">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:38:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[담당자(작업자 ID)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_history" id="E38AE679-C707-5AF5-A0A8-4F0AE68A68C0">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:38:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[결제 로그 기록 시각]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>action_time_default</constraintName>
+<constraintNotes><![CDATA[결제일 로그 추적]]></constraintNotes>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paylog_memo" id="50D5CD17-010C-7DB8-1B04-7CDC32468461">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:39:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[기타사항 입력1(00자 이내)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DA137951-BAAC-180D-71AE-D72B46673BD0" name="paylog_tbl_PK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:33:01 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55089779-BDC4-6183-4DA5-BF0EA9F81356"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40E365D9-A10A-6E88-C5FF-520E3C1D37DD" name="paylog_id_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:40:32 UTC</createdTime>
+<comment><![CDATA[결제기록 id 중복방지용]]></comment>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55089779-BDC4-6183-4DA5-BF0EA9F81356"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4A52BAF-1D5E-4DA6-E647-8B6047D09866" name="paylog_tbl_payment_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:48:22 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA89ED18-51EF-094B-C20D-C20813C8B390"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1898C34-B094-9B5A-261A-E942D2E0CD62" name="paylog_tbl_member_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:48:43 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6BEAE40-7B76-8246-6C8C-E98507271FD1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F224135B-1DA7-E13D-7AD3-C48CFAA708D9" name="paylog_tbl_card_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:49:12 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACD633C5-779D-469F-2581-663D6FD97B3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FBE040E-F95D-8D9E-B85A-7FEC3AFE5946" name="paylog_tbl_account_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:50:38 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DBCCF2F-3DE8-9010-F99F-F3CD3C5925B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82E92E82-3F05-7D5E-CF48-3DA4ABA943C8" name="paylog_tbl_reservation_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:51:17 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9605803-5C77-6CCE-18BF-B3BB7DE574D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="action_type_CH" directorySegmentName="seg_0" id="F6FD54D7-47B8-BD21-FB5B-B0E062E33A98">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 03:45:46 UTC</createdTime>
+<comment><![CDATA[결제 동작 유형(결제/취소 등)]]></comment>
+<ownerDesignName>main250808</ownerDesignName>
+<rule><![CDATA[CHECK (action_type IN ('결제', '취소', '환불', '실패', '수정', '삭제'))]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

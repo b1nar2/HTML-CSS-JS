@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37CEA92C-DEE7-51E3-3C06-00F5C5F24FFD" name="account_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:22:24 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="account_id" id="330B925C-1E27-EB2A-1FDB-EE57B8073562">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:23:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[회원 계좌 고유번호 (PK)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" id="F4B15A50-D669-D15E-2B51-662472CECD59">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:31:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[계좌 소유자 회원 ID (FK)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CEF3626B-5001-DB0B-1CAA-40DC3D7C5446" referredColumn="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</associations>
+</Column>
+<Column name="account_bank" id="E70C0EC1-FF2E-3799-80B0-E9D405B06107">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 06:38:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[계좌 은행명 (예: 국민은행, 카카오뱅크 등)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="account_number" id="8AAF87BD-EF32-F4B1-8A82-3C6D394A84C7">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:45:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[실제 계좌번호]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="account_main" id="A0D3D123-9EE5-774C-F6C4-9ED730D6EF41">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:46:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[대표 계좌 여부 (Y/N)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>account_main_default</constraintName>
+<constraintNotes><![CDATA[대표계좌 등록여부 기본값(아니오)]]></constraintNotes>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="account_reg_date" id="98F5DF17-9975-EED1-D15D-DE8A65E5D080">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:47:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[계좌 등록일]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>reg_date_default</constraintName>
+<constraintNotes><![CDATA[계좌등록일 = 오늘]]></constraintNotes>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BF7640A-9A0F-8F81-DD57-8096F73FEC34" name="account_tbl_PK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:23:04 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="330B925C-1E27-EB2A-1FDB-EE57B8073562"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD2690A2-20BD-6437-A517-457AF401DB79" name="account_id_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:32:41 UTC</createdTime>
+<comment><![CDATA[회원 계좌 아이디 중복방지]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="330B925C-1E27-EB2A-1FDB-EE57B8073562"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A4131A2-27BB-AE2E-8DEC-3120711367FE" name="account_number_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 02:21:13 UTC</createdTime>
+<comment><![CDATA[계좌중복 방지]]></comment>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8AAF87BD-EF32-F4B1-8A82-3C6D394A84C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FE7B5FF-80AF-7F76-CFCA-850414ED01C2" name="account_tbl_member_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 02:35:44 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4B15A50-D669-D15E-2B51-662472CECD59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="account_main_CH" directorySegmentName="seg_0" id="3F64DAA7-A47B-B355-A400-95843B24A668">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:33:06 UTC</createdTime>
+<comment><![CDATA[등록한 계좌를 대표계좌 설정할지 여부]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[CHECK (account_main IN ('Y', 'N'))]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

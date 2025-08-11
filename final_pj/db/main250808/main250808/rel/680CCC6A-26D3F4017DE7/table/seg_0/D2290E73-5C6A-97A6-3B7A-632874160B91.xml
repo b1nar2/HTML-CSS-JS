@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D2290E73-5C6A-97A6-3B7A-632874160B91" name="file_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:55:55 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="file_id" id="9FC843C6-7571-F78F-3644-AFF9F35B3B7D">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:55:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[파일 고유번호]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_target_type " id="B4D552A9-E859-B752-233E-FE08F00A7C8F">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:55:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[어느 테이블에 속한 파일인지(게시판, 콘텐츠, 시설 등등)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_target_id " id="E0250843-A25B-B94D-D8EF-B80400347532">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:59:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[어느 게시물/시설의 파일인지 (PK/FK는 아님, 문자열 ID)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_name " id="0BC324DB-327C-D31F-FC8E-A0DC81B424D3">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:59:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[실제 업로드된 원본 파일명]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_path " id="8CC148F3-F70D-C2FA-51CE-8F443A829171">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:00:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[서버 저장 경로 (URL 또는 물리경로)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_type" id="94E2802F-1CF0-C142-8E8D-B75F58BF1879">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:00:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[파일 용도 (본문 이미지, 썸네일 등)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintName>file_type_default</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<defaultValue>&apos;본문&apos;</defaultValue>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_ext " id="7E784ABD-4A5B-52E4-4740-4262C90153D8">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:01:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[파일 확장자]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_size" id="20CC86A7-694D-6E5D-0A71-AF30202CDFDE">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:01:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[파일 크기 (byte 단위)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_reg_date" id="ACCA7552-3503-7BF4-46B6-D1805E5647B8">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:02:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[파일 등록일]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintName>file_reg_date_default</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44BAA597-DAA5-E27A-6505-389BFBE1AEFC" name="member_tblv1_PK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:55:55 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FC843C6-7571-F78F-3644-AFF9F35B3B7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AC845D0-3B28-AD05-0D89-F5066AF82954" name="file_id_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 05:04:56 UTC</createdTime>
+<comment><![CDATA[파일ID 중복금지]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FC843C6-7571-F78F-3644-AFF9F35B3B7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="file_type_CH" directorySegmentName="seg_0" id="731E34CE-FF1A-BBD8-7D55-B078CE341990">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:55:55 UTC</createdTime>
+<comment><![CDATA[파일 용도 (본문 이미지, 썸네일 등)]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[file_type IN ('썸네일', '본문')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

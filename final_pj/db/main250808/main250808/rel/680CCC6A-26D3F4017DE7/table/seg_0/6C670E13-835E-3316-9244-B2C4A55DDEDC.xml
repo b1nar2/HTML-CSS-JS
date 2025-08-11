@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6C670E13-835E-3316-9244-B2C4A55DDEDC" name="contents_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<ordsAlias>contents_tblv1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="content_id" id="41AC6CD5-DAEE-3B24-E4C1-E9E78E604FF6">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[콘텐츠 고유 ID]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="content_title" id="E7FDDF0D-7C42-E7FC-A39B-2C9C8514AD97">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[콘텐츠 제목]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="content_content" id="D207A90C-E056-054F-286D-47B4D470C290">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" id="6463BB86-F4CE-C736-B90F-C5F7BE49DA6F">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[회원ID]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="24CAC5F5-87ED-7732-AA72-CB911922D5AD" referredColumn="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</associations>
+</Column>
+<Column name="content_reg_date" id="B89365A3-4904-05AA-69FA-60E153407BB8">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[작성일]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>content_reg_date_default</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="content_mod_date" id="C3B31884-5FD7-0E2A-7283-54EFCA136274">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[수정일]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="content_use" id="CEFA15CB-9900-6556-2285-9E0ADE676CAF">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[사용여부(활성화/비활성화)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>content_use_default</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<defaultValue>&apos;Y&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C04ECB88-D702-BBD7-2402-A827070DC569" name="board_tblv1_PK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41AC6CD5-DAEE-3B24-E4C1-E9E78E604FF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27814E88-2185-9089-A752-697D8A5E8B65" name="contents_tbl_member_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:35:22 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6463BB86-F4CE-C736-B90F-C5F7BE49DA6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="content_use_CH" directorySegmentName="seg_0" id="DBDC85F4-56A0-D9B3-D698-1F371952D3E8">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:33:29 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<rule><![CDATA[content_use IN ('Y', 'N')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

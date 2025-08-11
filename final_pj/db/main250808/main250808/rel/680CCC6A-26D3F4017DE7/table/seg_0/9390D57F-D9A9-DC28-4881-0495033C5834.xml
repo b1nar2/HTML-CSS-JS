@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9390D57F-D9A9-DC28-4881-0495033C5834" name="reservation_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<abbreviation>member</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="resv_id" id="47A8512E-B766-4663-539B-30F4B0A0FF81">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[예약 고유 번호 (결제 시스템과 연동)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" id="D2983A91-3658-AE4E-DD42-D40F90F607D2">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[신청자 ID]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF2AEDF3-126A-8726-D66C-D67D83FB17AB" referredColumn="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</associations>
+</Column>
+<Column name="facility_id" id="C6A564D0-7656-C12C-00DA-416753C95360">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[예약 대상 시설]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="242A0D54-1C56-8110-8117-930D3070DFB9" referredColumn="D68224B8-F248-0B00-C5EC-7B29E64BDEE7"/>
+</associations>
+</Column>
+<Column name="resv_content" id="3F33B0D9-4B61-7A17-1F94-3A4483A7E1AD">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:08:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[신청시 요구 사항(단순 텍스트)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="want_date" id="C881CCC9-349B-A530-7B57-D248C87ABFC8">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[예약 희망일]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resv_date" id="CF850956-C07F-17A0-626E-749EB185201E">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[예약 신청일 (프론트 화면에 나오는 용도)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintName>예약 신청일</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resv_log_time " id="5E0E9CB6-8F5E-2886-D170-FCAEC741C703">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-07 04:09:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[resv_date의 확장판 - 사용자가 신청한 등록한 로그 추적용(log4-j2)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintName>예약 신청일</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resv_person_count" id="F888A613-89D8-35E8-196E-D46623386514">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[신청 인원 수]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resv_status" id="D20BB4BC-BC8E-B120-BB08-F0269E08DA4D">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[예약 상태]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintComment><![CDATA[프론트/백엔드→ DEFAULT '완료', CHECK]]></constraintComment>
+<constraintName>resv_status_default</constraintName>
+<constraintNotes><![CDATA[프론트/백엔드→ DEFAULT '완료', CHECK]]></constraintNotes>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<defaultValue>&apos;완료&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="745D6025-3DD3-3353-603B-3A2751E6640C" name="reservation_tbl_PK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47A8512E-B766-4663-539B-30F4B0A0FF81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01A0F08B-408E-30F6-7045-84DAF8AE5C4C" name="reservation_tbl_facility_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 03:21:10 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6A564D0-7656-C12C-00DA-416753C95360"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F5277B4-1AB5-96C2-E9A2-99923084833A" name="reservation_tbl_member_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:16:40 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2983A91-3658-AE4E-DD42-D40F90F607D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="resv_status_CH" directorySegmentName="seg_0" id="5C8A8DE6-C42C-DD62-030B-D6EFE7A27588">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 00:42:11 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[CHECK (resv_status IN ('완료', '취소', '대기'))]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

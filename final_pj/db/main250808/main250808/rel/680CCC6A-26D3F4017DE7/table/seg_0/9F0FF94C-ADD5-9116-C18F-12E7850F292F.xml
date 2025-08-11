@@ -1,0 +1,275 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9F0FF94C-ADD5-9116-C18F-12E7850F292F" name="member_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 05:06:39 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="member_id" id="A416B719-F82C-C217-2B75-CC1392E17C14">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 05:41:27 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_pw" id="16BF89D7-9A02-58A5-9318-9EFB18CCE01B">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:30:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[회원 비번]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_name" id="016F6A65-269C-F38B-2009-9FD57E3156CD">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:32:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[사용자명]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_gender" id="F8A8AFA0-46B7-5F49-B335-724B517C7219">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:32:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[성별]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_email" id="CBA4F85E-25D7-ECDE-CC49-E118AAEA5BEA">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:37:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[이메일]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_mobile" id="C061FA16-5131-0D58-4703-767A333924E4">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:38:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[휴대폰번호]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_phone" id="F88A9CAA-954E-CF65-8AF6-2833761CBAAD">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:49:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[그냥 전화 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zip" id="D79B2052-8838-6EFE-F544-65E0DC9CAC17">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:51:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[우편번호]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="road_address" id="6753CAF5-C865-8EC7-E528-EFE8DFF1999C">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:52:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[도로명주소 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jibun_address" id="63DC9FA7-26D0-1C25-DD17-A55B953128AC">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:53:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[지번 주소 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="detail_address" id="080046FD-9588-A574-CB83-8B403CD8689D">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:53:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[상세주소 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_birthday" id="81F29B9C-361A-0272-EED2-175FD400F8E1">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:54:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[생년월일 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_joindate" id="9950CCD5-B134-B9B8-C721-0E37991013CE">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:54:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[가입일 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintName>member_joindate_default</constraintName>
+<constraintNotes><![CDATA[가입일(오늘날짜)]]></constraintNotes>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_role" id="F13232B0-A1A3-5D8B-6E67-1D48127F40E4">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:56:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[권한 ]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="admin_type" id="FC048F47-4253-1D52-5269-19EC8205DED6">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 01:21:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[관리자 종류(책임자, 관리자, 강사)]]></commentInRDBMS>
+<ownerDesignName>main</ownerDesignName>
+<constraintName>admin_type_default</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<defaultValue>관리자</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C2374F3-AEFB-E669-14E8-A7B0E94E0953" name="member_joindate_default">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 05:41:27 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D947CCE-4056-E9AF-1548-845EF86F560E" name="member_id_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 05:41:27 UTC</createdTime>
+<comment><![CDATA[ID 중복값 방지용 ]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86FFCC73-893C-6358-445F-19471B7A1226" name="member_email_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:47:27 UTC</createdTime>
+<comment><![CDATA[이메일 DB값 중복 방지용 ]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBA4F85E-25D7-ECDE-CC49-E118AAEA5BEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7F0275C-74B6-51AA-983B-F90961EAE290" name="member_mobile_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:39:49 UTC</createdTime>
+<comment><![CDATA[휴대폰 중복값 방지용 ]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C061FA16-5131-0D58-4703-767A333924E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="member_gender_CH" directorySegmentName="seg_0" id="E7CE19C4-B2E3-223D-2AFC-F081569D4444">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:35:08 UTC</createdTime>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[gender in ('m','f')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="member_role_CH" directorySegmentName="seg_0" id="047FA463-33B0-C148-6F96-F0EA6EF2F957">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-04 06:56:33 UTC</createdTime>
+<comment><![CDATA[role IN ('user', 'admin')]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[member_role IN ('user', 'admin')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="admin_type_CH" directorySegmentName="seg_0" id="AAE84F3A-D590-24EF-6F11-7B667F227D33">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-06 01:24:05 UTC</createdTime>
+<comment><![CDATA[관리자 계정 (책임자/관리자/강사 중 선택)]]></comment>
+<ownerDesignName>main</ownerDesignName>
+<rule><![CDATA[ALTER TABLE member_tbl
+ADD CONSTRAINT chk_member_admin_type
+CHECK (
+  role != 'admin' OR admin_type IN ('책임자', '관리자', '강사')
+);
+]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

@@ -1,0 +1,201 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A246DE2C-A7A8-300D-C972-43515195E142" name="post_tbl">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="post_id" id="74B04A73-9009-1ED2-BC91-580B455A1AC5">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시글 고유번호(PK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="board_id" id="B226B171-62A8-C934-C2CC-B3A8ACB108AE">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시판 ID(FK)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F5C258B2-09FD-99CE-C132-EFDA779A5564" referredColumn="AA40F94F-0F70-E846-3A21-700A1A434E8D"/>
+</associations>
+</Column>
+<Column name="post_title" id="9907F38F-6A2F-072C-1064-AADF63FC3BC9">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시글 제목]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post_content " id="5CB1C341-2C53-25C2-F5E2-350673B78E06">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시글 내용(HTML 가능)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" id="6A19880F-7A71-AA5A-BE9B-D5F2C95FC0C6">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[작성자 id(member_tbl)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8503A895-25E9-0E96-C14D-9A65A879F07D" referredColumn="A416B719-F82C-C217-2B75-CC1392E17C14"/>
+</associations>
+</Column>
+<Column name="post_reg_date" id="4CDE9101-6709-640C-EB20-D171D1F85893">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[등록일(기본값 SYSDATE)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>post_reg_date_default</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post_mod_date" id="BD59D9A3-CF18-4098-400F-EFA89E6AC761">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[수정일(수정시 갱신)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post_view_count" id="3E2560DA-0D6D-ED85-7BE2-AC3CEDC6975C">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[조회수(기본값 0)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>post_view_count_default</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post_notice" id="9C84F753-0579-229D-F83C-82BB452ED417">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[공지글 여부(기본값 'N')]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>post_notice_default</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post_type" id="3A77514A-FF8C-E952-4E00-3148DB5E1243">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시글 유형(공지/일반 등 구분)]]></commentInRDBMS>
+<ownerDesignName>main250808</ownerDesignName>
+<constraintName>post_type_default</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<defaultValue>&apos;일반&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="23CB9D58-8C47-7006-96C0-75325B422A37" name="board_tblv1_PKv1">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74B04A73-9009-1ED2-BC91-580B455A1AC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25DB7840-C620-49AB-F97B-37D419E45155" name="post_id_UN">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<comment><![CDATA[게시판id 중복 금지]]></comment>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74B04A73-9009-1ED2-BC91-580B455A1AC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E5D4FD0-1BFC-BD8F-C65C-97CC511952A8" name="post_tbl_member_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:30:00 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A19880F-7A71-AA5A-BE9B-D5F2C95FC0C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1BECDAE-332F-F239-138C-9138C418A7F9" name="post_tbl_board_tbl_FK">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:32:21 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B226B171-62A8-C934-C2CC-B3A8ACB108AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="post_notice_CH" directorySegmentName="seg_0" id="E3992936-B619-94C8-71FB-D47EA0AE4C72">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<rule><![CDATA[post_notice in ('Y','N')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="post_type_CH" directorySegmentName="seg_0" id="C57F7F74-E5BE-3F14-5D1F-305871D7B910">
+<createdBy>kimsooheon</createdBy>
+<createdTime>2025-08-08 01:27:05 UTC</createdTime>
+<ownerDesignName>main250808</ownerDesignName>
+<rule><![CDATA[post_type IN ('공지', '일반')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

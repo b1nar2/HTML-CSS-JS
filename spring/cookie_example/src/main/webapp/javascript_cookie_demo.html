@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>cookie exam</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+// 쿠키 생성(cookie)
+function setCookie(cName, cValue, cDay){
+    var expire = new Date();
+    expire.setDate(expire.getDate() + cDay);
+    cookies = cName + '=' + escape(cValue) + '; path=/ ';
+    // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+    if(typeof cDay != 'undefined') cookies += ';expires='
+        + expire.toGMTString() + ';';
+    document.cookie = cookies;
+}
+ 
+// 쿠키 가져오기(cookie)
+function getCookie(cName) {
+    cName = cName + '=';
+    var cookieData = document.cookie;
+    var start = cookieData.indexOf(cName);
+    var cValue = '';
+    if(start != -1){
+        start += cName.length;
+        var end = cookieData.indexOf(';', start);
+        if(end == -1)end = cookieData.length;
+        cValue = cookieData.substring(start, end);
+    }
+    return unescape(cValue);
+}
+</script>
+ 
+<script>
+$(function() {
+   
+    $("#save_btn").click(function() {
+       
+        var txt = $("#txt").val();
+        alert(txt);
+        setCookie("cookie_txt", txt, 1);
+    });
+   
+    $("#view_btn").click(function() {
+       
+        $("#txt2").val(getCookie("cookie_txt"));
+    });
+});
+</script>
+</head>
+<body>
+ 
+    <input type="text" id="txt" name="txt">
+    <input type="button" id="save_btn" value="쿠키 저장"><br>
+   
+    <input type="text" id="txt2" name="txt2">
+    <input type="button" id="view_btn" value="쿠키 보기">
+   
+   
+</body>
+</html>
