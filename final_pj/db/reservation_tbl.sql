@@ -15,15 +15,6 @@ CREATE TABLE reservation_tbl (
 -- PK 설정
 ALTER TABLE reservation_tbl ADD CONSTRAINT pk_resv_id PRIMARY KEY ( resv_id );
 
--- 예약 상태 제약
-ALTER TABLE reservation_tbl
-ADD CONSTRAINT resv_status_ch
-CHECK ( resv_status IN('완료', '취소', '대기') );
-
--- 신청 인원수 제약 (추가) : 한 명 이상으로 제약
-ALTER TABLE reservation_tbl
-ADD CONSTRAINT resv_person_count_chk
-CHECK (resv_person_count > 0);
 
 
 -- FK 설정
@@ -40,6 +31,15 @@ FOREIGN KEY (facility_id)
 REFERENCES facility_tbl(facility_id)
 
 
+-- 예약 상태 제약
+ALTER TABLE reservation_tbl
+ADD CONSTRAINT resv_status_ch
+CHECK ( resv_status IN('완료', '취소', '대기') );
+
+-- 신청 인원수 제약 (추가) : 한 명 이상으로 제약
+ALTER TABLE reservation_tbl
+ADD CONSTRAINT resv_person_count_chk
+CHECK (resv_person_count > 0);
 
 
 -- 주석 설정
