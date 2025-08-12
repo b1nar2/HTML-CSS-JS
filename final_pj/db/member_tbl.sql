@@ -1,4 +1,5 @@
-sCREATE TABLE member_tbl (
+-- 회원 정보 테이블
+CREATE TABLE member_tbl (
     member_id           VARCHAR2(20)  NOT NULL,
     member_pw           VARCHAR2(300) NOT NULL, -- 비밀번호 암호화를 고려해 300자 이상으로 설정
     member_name         VARCHAR2(100) NOT NULL,
@@ -51,6 +52,7 @@ REFERENCES 부모테이블명(부모컬럼명)
 ON DELETE CASCADE;  -- 옵션 (선택 사항) */
 
 -- 주석 설정
+COMMENT ON COLUMN member_tbl                    IS '회원 정보 테이블';
 COMMENT ON COLUMN member_tbl.member_id          IS '회원 ID';
 COMMENT ON COLUMN member_tbl.member_pw          IS '회원 비번';
 COMMENT ON COLUMN member_tbl.member_name        IS '사용자명';
