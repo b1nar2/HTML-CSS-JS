@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>파일 업로드 에러 처리 페이지</title>
+<script>
+	window.onload=function() {
+		
+		console.log("error_msg : [[${error_msg}]]");
+			       
+		alert("[[${error_msg}]]\n홈페이지로 이동하겠습니다.");
+		
+		setTimeout(function() {
+			location.href= "[[@{'/'}]]"; // 페이지 이동
+		}, 100);
+	} //
+</script>
+</head>
+<body>
+
+</body>
+</html>
