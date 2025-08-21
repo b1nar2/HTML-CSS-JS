@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>달력</title>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+#calendar {
+	display : flex;
+	flex-direction : row;
+	flex-wrap : wrap;
+	width : 840px;
+	height : 720px;
+	overflow : hidden;
+	background-color : yellow;
+	margin : 20px;	
+}
+
+.cell {
+	display : flex;
+	align-items : center;
+	justify-content : center; 
+	width : 120px;
+	height : 120px;
+	border : 1px solid #ccc;
+	font-size : 12px;
+	font-weight : bold; 
+}
+</style>
+
+<script>
+window.onload = () => {
+	
+	const btn = document.getElementById("submitBtn");
+
+	btn.addEventListener("click", () => {
+		
+		const year = document.getElementById("year").value;
+		const month = document.getElementById("month").value;
+		
+		console.log(`submitBtn 클릭 : ${year}년 ${month}월`);
+	
+		axios.get('/CalendarDemo/calendar', {
+		    params: {
+		      year : year,
+		      month : month
+		    }
+		  })
+		  .then((json) => {
+			  
+			console.log(json.data);
+			
+			// 달력 생성
+			console.log("셀(날짜)의 갯수 : ", json.data.length);
+			
+			let monthData = json.data;
+			let calendarSection = document.getElementById("calendar");
+						
+			// 기존 달력 초기화
+			calendarSection.innerHTML = "";
+			
+			for (let i=0; i< monthData.length; i++) {
+				
+				let cellData = monthData[i]; 
+				
+				let date = cellData.localDate == null ? "" : cellData.localDate;
+				let dayName = cellData.dayName == null ? "" : cellData.dayName;
+				
+				let color = cellData.dayKind == "0" ? "Azure" : 
+					        cellData.dayKind == "1" ? "DeepSkyBlue" :
+				        	cellData.dayKind == "2" ? "Lavender" : "#fff";
+				
+				console.log("color : ", color);
+				
+				let cell = `<div class="cell" style="background-color:${color}">${date}<br />${dayName}</div></div>`;
+				
+				calendarSection.innerHTML += cell;
+			} //for
+			
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
+		
+	}); // btn
+	  
+}
+</script>
+
+</head>
+<body>
+
+	<div style="width: 300px; height: 200px; margin: 20px">
+	
+		<input type="number" class="form-control" id="year" min="2020" max="2025" placeholder="년도를 입력하십시오 ex) 2025"><br>
+	
+		<input type="number" class="form-control" id="month" min="1" max="12" placeholder="월을 입력하십시오. ex) 1 ~ 12"><br>
+	
+		<button id="submitBtn" class="btn btn-primary">전송</button>
+				
+	</div>
+	
+	<div id="calendar">
+	
+	</div>
+	
+</body>
+</html>
