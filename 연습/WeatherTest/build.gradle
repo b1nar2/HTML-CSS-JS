@@ -1,0 +1,42 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.5.5'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'Demo project for Spring Boot'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+/*
+  리플렉션 기반 라이브러리에서 파라미터 이름을 정확히 사용하기 위해
+  자바 컴파일시 -paramters 옵션 추가.
+	=> .class 파일에 메서드 파라미터 이름 포함
+*/
+tasks.withType(JavaCompile) {
+    options.compilerArgs += "-parameters"
+}
+
+ 
