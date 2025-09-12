@@ -1,0 +1,39 @@
+/* 1dapth - 가로 배열 */
+
+nav {
+  display: flex;
+  gap: 10px; /* 메뉴 사이 간격 */
+}
+
+.menu-item {
+  display: inline-block;    /* 박스 스타일 적용 위해 필요 */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;          /* 클릭 가능 커서 표시*/
+  user-select: none;        /* 텍스트 드래그 방지 */
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0; /* 마우스 올릴 때 배경색 */
+}
+
+.menu-item.selected {
+  font-weight: bold;
+  background-color: #e0f7fa; /* 선택된 메뉴 배경색 */
+  border-color: #00acc1;
+}
+
+/* 2dapth - 세로 배열 */
+.menu-2depth {
+  display: flex;
+  flex-direction: column; /* 세로 나열 */
+  gap: 8px;
+  width: 150px; /* 적당한 너비 지정 */
+}
+
+.menu-2depth .menu-item {
+  padding: 8px 15px;
+  font-size: 14px;
+}
